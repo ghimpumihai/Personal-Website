@@ -3,8 +3,9 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Section } from "@/components/ui/Section";
-import { Button } from "@/components/ui/Button";
-import Link from "next/link";
+
+
+import Image from "next/image";
 
 export function Hero() {
   return (
@@ -20,45 +21,16 @@ export function Hero() {
           className="flex flex-col items-start gap-6 md:w-3/5"
         >
           <div className="flex flex-col gap-2">
-            <motion.span 
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.2, duration: 0.5 }}
-              className="text-lg font-medium text-primary-600 dark:text-primary-400"
-            >
-              Hi, my name is
-            </motion.span>
+
             
             <h1 className="text-4xl font-extrabold tracking-tight text-slate-900 dark:text-slate-50 sm:text-5xl md:text-6xl lg:text-7xl">
-              Ghimpu Mihai-Stefan
+              Building Robust Software Systems.
             </h1>
             
-            <h2 className="text-3xl font-bold tracking-tight text-slate-500 dark:text-slate-400 sm:text-4xl md:text-5xl">
-              Computer Science Student & Developer.
-            </h2>
+            <p className="max-w-2xl text-lg text-slate-600 dark:text-slate-400 md:text-xl leading-relaxed mt-4">
+              I&apos;m <span className="font-semibold text-slate-900 dark:text-slate-100">Ștefan Ghimpu</span>, a Software Engineer Intern with real-world experience at BMW TechWorks, specializing in Java and Quarkus.
+            </p>
           </div>
-
-          <p className="max-w-2xl text-lg text-slate-600 dark:text-slate-400 md:text-xl leading-relaxed">
-            I&apos;m a Computer Science student at Babes-Bolyai University building high-performance, scalable software. Currently interning at BMW TechWorks, I specialize in full-stack engineering, cloud-native ecosystems, and IoT solutions.
-          </p>
-
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4, duration: 0.5 }}
-            className="flex flex-wrap gap-4 pt-4"
-          >
-            <Link href="#projects">
-              <Button size="lg" className="px-8 text-base">
-                View Projects
-              </Button>
-            </Link>
-            <a href="mailto:stefanghimpu2005@yahoo.com">
-              <Button variant="outline" size="lg" className="px-8 text-base">
-                Contact Me
-              </Button>
-            </a>
-          </motion.div>
         </motion.div>
 
         <motion.div
@@ -68,8 +40,15 @@ export function Hero() {
           className="flex justify-center md:w-2/5 md:justify-end"
         >
           <div className="relative flex h-64 w-64 items-center justify-center rounded-full bg-gradient-to-tr from-blue-500 to-emerald-400 p-1 shadow-2xl md:h-80 md:w-80">
-            <div className="flex h-full w-full items-center justify-center overflow-hidden rounded-full bg-slate-100 dark:bg-slate-900">
-              <img src="/images/profile/profile.jpg" alt="Profile Picture" className="h-full w-full rounded-full object-cover" />
+            <div className="relative flex h-full w-full items-center justify-center overflow-hidden rounded-full bg-slate-100 dark:bg-slate-900">
+              <Image 
+                src="/images/profile/profile.jpg" 
+                alt="Profile Picture" 
+                fill
+                sizes="(max-width: 768px) 256px, 320px"
+                className="object-cover"
+                priority
+              />
             </div>
           </div>
         </motion.div>

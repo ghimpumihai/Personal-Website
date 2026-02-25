@@ -20,7 +20,7 @@ export function Section({
   ...props
 }: SectionProps) {
   return (
-    <section id={id} className={cn("py-16 md:py-24", className)} {...props}>
+    <section id={id} className={cn("py-20 md:py-32", className)} {...props}>
       <Container className={cn("flex flex-col gap-8", containerClassName)}>
         {(title || subtitle) && (
           <div className="flex flex-col gap-4 max-w-3xl">

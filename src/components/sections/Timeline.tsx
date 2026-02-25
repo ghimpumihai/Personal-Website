@@ -18,25 +18,23 @@ const experiences: ExperienceItem[] = [
   {
     id: "exp-1",
     type: "work",
-    title: "Java Internship",
+    title: "Software Engineer Intern",
     companyOrSchool: "BMW TechWorks",
-    period: "November 2025 - Present",
+    period: "November 2024 - Present",
     description: [
-      "Ensured RESTful API integrity and high performance through rigorous manual testing.",
-      "Accelerated cloud-native adoption using Quarkus and Java 17+ for enterprise-grade solutions.",
-      "Validated business logic and backend architecture in collaboration with senior developers."
+      "Engineered and validated RESTful APIs using Java 17+ and Quarkus for high-performance enterprise systems.",
+      "Collaborated with senior engineers to implement scalable, cloud-native solutions and refine complex business logic."
     ]
   },
   {
     id: "exp-2",
     type: "work",
-    title: "ROSPIN Satellite Data Processing",
-    companyOrSchool: "",
+    title: "Full-Stack Developer",
+    companyOrSchool: "ROSPIN Satellite Data Processing",
     period: "October - December 2025",
     description: [
-      "Engineered a Django backend integrating Google Earth Engine API for satellite imagery retrieval.",
-      "Developed interactive React dashboards with real-time data visualizations.",
-      "Streamlined code integration and prepared the application for containerized deployment."
+      "Engineered a Django backend integrating Google Earth Engine for efficient satellite imagery processing.",
+      "Developed interactive React dashboards to provide real-time data visualizations and actionable insights."
     ]
   },
   {
@@ -46,12 +44,17 @@ const experiences: ExperienceItem[] = [
     companyOrSchool: "Babes-Bolyai University",
     period: "2024 - 2027",
     description: [
-      "Pursuing a comprehensive curriculum in Computer Science at Babes-Bolyai University.",
-      "Specializing in software engineering, advanced algorithms, and high-performance data structures."
+      "Pursuing a comprehensive Computer Science curriculum with a focus on modern software engineering.",
+      "Specializing in advanced algorithms, system architecture, and high-performance data structures."
     ]
   }
 ];
 
+const getDotColor = (index: number, total: number) => {
+  if (index === 0) return "bg-blue-500 dark:bg-blue-400";
+  if (index === total - 1) return "bg-emerald-400 dark:bg-emerald-500";
+  return "bg-teal-400 dark:bg-teal-500";
+};
 export function Timeline() {
   return (
     <Section id="experience" title="Experience" subtitle="My professional journey and education.">
@@ -77,9 +80,8 @@ export function Timeline() {
                 whileInView={{ scale: 1 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.4, delay: index * 0.1 + 0.2, type: "spring", stiffness: 200 }}
-                className="absolute left-8 -ml-3 mt-6 flex h-6 w-6 items-center justify-center rounded-full border-4 border-white bg-blue-500 shadow-md dark:border-slate-950 dark:bg-blue-400 md:left-1/2 md:ml-[-12px] z-10"
+                className={`absolute left-8 -ml-3 mt-6 flex h-6 w-6 items-center justify-center rounded-full border-4 border-white shadow-md dark:border-slate-950 md:left-1/2 md:ml-[-12px] z-10 ${getDotColor(index, experiences.length)}`}
               >
-                <div className="h-2 w-2 rounded-full bg-white dark:bg-slate-950" />
               </motion.div>
 
               {/* Content Spacer for Desktop */}
@@ -121,7 +123,7 @@ export function Timeline() {
                       )}
                     </div>
                   </CardHeader>
-                  <CardContent className="pb-5 text-sm text-slate-600 dark:text-slate-400">
+                  <CardContent className="pb-5 text-m text-slate-600 dark:text-slate-400">
                     <ul className="space-y-1.5 marker:text-slate-300 dark:marker:text-slate-600 list-disc pl-4 text-left">
                       {experience.description.map((item, i) => (
                         <li key={i}>{item}</li>
