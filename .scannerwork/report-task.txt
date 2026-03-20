@@ -1,0 +1,7 @@
+organization=ghimpumihai
+projectKey=ghimpumihai_Personal-Website
+serverUrl=https://sonarcloud.io
+serverVersion=8.0.0.82683
+dashboardUrl=https://sonarcloud.io/dashboard?id=ghimpumihai_Personal-Website
+ceTaskId=AZzZ_xYddXtCDGirUkfk
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AZzZ_xYddXtCDGirUkfk

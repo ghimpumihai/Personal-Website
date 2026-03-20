@@ -25,7 +25,7 @@ export function Projects() {
             className="h-full"
           >
             <Card className="h-full flex flex-col overflow-hidden group hover:shadow-xl transition-all duration-300 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800">
-              <Link href={`/projects/${project.slug}`} className="block flex-grow flex flex-col">
+              <Link href={`/projects/${project.slug}`} className="flex-grow flex flex-col">
                 <div className={`aspect-video w-full ${project.imageColor} relative overflow-hidden`}>
                   {project.image ? (
                     <Image 
