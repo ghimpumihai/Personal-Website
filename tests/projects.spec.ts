@@ -1,64 +1,96 @@
 import { test, expect } from '@playwright/test';
 
 test.describe('Projects Routing & Detail Pages', () => {
-
-  test('Homepage project cards link to correct detail pages', async ({ page }) => {
+  test('Homepage has clickable project card links to all 3 detail pages', async ({ page }) => {
     await page.goto('/');
-    
-    // Find the link for SkyWind. We know the URL is /projects/skywind
-    const skywindLink = page.locator('a[href="/projects/skywind"]');
-    await expect(skywindLink).toBeVisible();
-    
-    // Click the link and verify URL
-    await skywindLink.click();
-    await page.waitForURL('**/projects/skywind');
-    await expect(page).toHaveURL(/.*\/projects\/skywind/);
+
+    await expect(page.locator('a[href="/projects/healthcheck"]')).toBeVisible();
+    await expect(page.locator('a[href="/projects/seebump"]')).toBeVisible();
+    await expect(page.locator('a[href="/projects/skywind"]')).toBeVisible();
   });
 
-  test('Detail page renders title, descriptions, and tags', async ({ page }) => {
+  test('/projects/healthcheck renders expected content', async ({ page }) => {
     await page.goto('/projects/healthcheck');
-    
-    // Verify Title
-    await expect(page.locator('h1', { hasText: 'HealthCheck' })).toBeVisible();
-    
-    // Verify tags
-    await expect(page.locator('text=C#').first()).toBeVisible();
-    await expect(page.locator('text=.NET 8+').first()).toBeVisible();
-    
-    // Verify Github link
-    await expect(page.locator('a', { hasText: 'View Source Code' })).toHaveAttribute('href', 'https://github.com/ghimpumihai/HealthCheck');
+
+    await expect(page.getByRole('heading', { level: 1, name: 'HealthCheck' })).toBeVisible();
+    await expect(page.getByText('Solves delayed outage detection', { exact: false })).toBeVisible();
+    await expect(page.getByText('C#', { exact: true }).first()).toBeVisible();
+    await expect(page.getByText('.NET 8+', { exact: true }).first()).toBeVisible();
+    await expect(page.getByRole('link', { name: 'View Source Code' })).toHaveAttribute(
+      'href',
+      'https://github.com/ghimpumihai/HealthCheck'
+    );
+    await expect(page.getByRole('link', { name: 'Back to Projects' })).toHaveAttribute('href', '/');
   });
 
-  test('Video embed renders correctly for Skywind', async ({ page }) => {
-    page.on('console', msg => console.log('Browser Console:', msg.text()));
-    page.on('pageerror', err => console.error('Browser PageError:', err.message));
-
-    await page.goto('/projects/skywind');
-    
-    // Wait for the video wrapper
-    const videoWrapper = page.locator('.aspect-video');
-    await expect(videoWrapper).toBeVisible();
-    
-    await page.waitForTimeout(3000); // give it time to load dynamically
-    console.log('Inner HTML after 3s:', await videoWrapper.innerHTML());
-    const mediaElement = page.locator('.aspect-video iframe, .aspect-video video').first();
-    await expect(mediaElement).toBeVisible({ timeout: 10000 });
-  });
-
-  test('Back to Projects link routes back to homepage', async ({ page }) => {
+  test('/projects/seebump renders expected content', async ({ page }) => {
     await page.goto('/projects/seebump');
-    
-    const backLink = page.locator('a', { hasText: 'Back to Projects' });
-    await expect(backLink).toBeVisible();
-    
-    await backLink.click();
-    await page.waitForURL('**/');
-    // Ensure we are back on the homepage
-    await expect(page).toHaveURL(/.*\//);
+
+    await expect(page.getByRole('heading', { level: 1, name: 'SeeBump' })).toBeVisible();
+    await expect(page.getByText('Addresses aggressive driving', { exact: false })).toBeVisible();
+    await expect(page.getByText('OpenCV', { exact: true }).first()).toBeVisible();
+    await expect(page.getByRole('link', { name: 'View Source Code' })).toHaveAttribute(
+      'href',
+      'https://github.com/ghimpumihai/PoliHack2025'
+    );
+    await expect(page.getByRole('link', { name: 'Back to Projects' })).toHaveAttribute('href', '/');
   });
 
-  test('Navigating to non-existent project returns 404', async ({ page }) => {
-    const response = await page.goto('/projects/non-existent-project');
+  test('/projects/skywind renders expected content including links', async ({ page }) => {
+    await page.goto('/projects/skywind');
+
+    await expect(page.getByRole('heading', { level: 1, name: 'SkyWind' })).toBeVisible();
+    await expect(page.getByText('Identifies optimal wind farm locations', { exact: false })).toBeVisible();
+    await expect(page.getByText('Django', { exact: true }).first()).toBeVisible();
+    await expect(page.getByRole('link', { name: 'View Source Code' })).toHaveAttribute(
+      'href',
+      'https://github.com/bbeatricecretu/RoSpin'
+    );
+    await expect(page.getByRole('link', { name: 'Back to Projects' })).toHaveAttribute('href', '/');
+  });
+
+  test('/projects/skywind renders a youtube iframe embed', async ({ page }) => {
+    await page.goto('/projects/skywind');
+
+    const youtubeIframe = page.locator('iframe[src*="youtube"]');
+    await expect(youtubeIframe.first()).toBeVisible({ timeout: 15000 });
+    await expect(youtubeIframe.first()).toHaveAttribute('src', /youtube/i);
+  });
+
+  test('/projects/nonexistent shows 404 behavior', async ({ page }) => {
+    const response = await page.goto('/projects/nonexistent');
+
     expect(response?.status()).toBe(404);
+    await expect(page.getByRole('heading', { level: 1, name: '404' })).toBeVisible();
+    await expect(page.getByRole('heading', { level: 2, name: 'This page could not be found.' })).toBeVisible();
+  });
+
+  test('Header Projects link from subpage navigates to /#projects', async ({ page }) => {
+    await page.goto('/projects/skywind');
+
+    const projectsHeaderLink = page.locator('nav[aria-label="Global"] a', { hasText: 'Projects' });
+    await projectsHeaderLink.click();
+
+    await expect(page).toHaveURL('/#projects');
+    await expect(page.locator('#projects')).toBeVisible();
+  });
+
+  test('Header logo from subpage navigates to /', async ({ page }) => {
+    await page.goto('/projects/skywind');
+
+    await page.getByRole('link', { name: 'Portfolio' }).first().click();
+    await expect(page).toHaveURL('/');
+  });
+
+  test('Back to Projects works across all detail pages', async ({ page }) => {
+    const slugs = ['healthcheck', 'seebump', 'skywind'];
+
+    for (const slug of slugs) {
+      await page.goto(`/projects/${slug}`);
+      await page.getByRole('link', { name: 'Back to Projects' }).click();
+
+      await expect(page).toHaveURL('/');
+      await expect(page.locator('#projects')).toBeVisible();
+    }
   });
 });

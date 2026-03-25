@@ -1,6 +1,4 @@
 "use client"
-
-import * as React from "react"
 import { Section } from "@/components/ui/Section"
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/Card"
 import { buttonVariants } from "@/components/ui/Button"
@@ -17,7 +15,7 @@ export function Projects() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {projects.map((project, index) => (
           <motion.div
-            key={index}
+            key={project.slug}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}

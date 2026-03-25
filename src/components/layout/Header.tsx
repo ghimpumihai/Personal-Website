@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Container } from "./Container";
@@ -9,8 +9,12 @@ import { Moon, Sun, Menu, X } from "lucide-react";
 export function Header() {
   const { theme, toggleTheme } = useTheme();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isHomePage, setIsHomePage] = useState(false);
   const pathname = usePathname();
-  const isHomePage = pathname === "/";
+
+  useEffect(() => {
+    setIsHomePage(pathname === "/");
+  }, [pathname]);
 
   const navLinks = [
     { name: "Experience", href: "#experience" },
@@ -65,6 +69,7 @@ export function Header() {
             </nav>
 
             <button
+              type="button"
               onClick={toggleTheme}
               className="rounded-full p-2 text-slate-500 transition hover:text-slate-900 dark:text-slate-400 dark:hover:text-white bg-slate-100 dark:bg-slate-800"
               aria-label="Toggle dark mode"
@@ -74,6 +79,7 @@ export function Header() {
 
             {/* Mobile menu toggle */}
             <button
+              type="button"
               className="block md:hidden rounded p-2 text-slate-500 transition hover:text-slate-900 dark:text-slate-400 dark:hover:text-white bg-slate-100 dark:bg-slate-800"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               aria-label="Toggle mobile menu"
