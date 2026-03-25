@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft, Github, Globe } from "lucide-react";
-import { Project } from "@/lib/projects";
+import type { Project } from "@/lib/projects";
 import { Container } from "@/components/layout/Container";
 import { cn } from "@/lib/utils";
 import { VideoPlayer } from "@/components/ui/VideoPlayer";
@@ -37,14 +37,20 @@ export function ProjectDetails({ project }: ProjectDetailsProps) {
           ) : (
             <div className="relative aspect-video w-full overflow-hidden rounded-xl bg-slate-100 dark:bg-slate-800 shadow-2xl ring-1 ring-slate-900/5 dark:ring-slate-50/10">
               <div className={cn("absolute inset-0 opacity-10", project.imageColor)} />
-              <Image
-                src={project.image}
-                alt={project.title}
-                fill
-                className="object-cover"
-                priority
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1200px"
-              />
+              {project.image ? (
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  fill
+                  className="object-cover"
+                  priority
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1200px"
+                />
+              ) : (
+                <div className="absolute inset-0 flex items-center justify-center text-center px-6">
+                  <p className="text-lg font-semibold text-slate-500 dark:text-slate-400">No preview image for this project</p>
+                </div>
+              )}
             </div>
           )}
 
