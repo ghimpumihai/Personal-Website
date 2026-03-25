@@ -42,4 +42,28 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/bbeatricecretu/RoSpin",
     demoUrl: "https://www.youtube.com/watch?v=GKJL2bXBgK8&t=5s",
   },
+  {
+    slug: "kickcollect",
+    title: "KickCollect",
+    description:
+      "KickCollect is a Next.js/React web app for tracking a digital football trading-card collection, with client-side CRUD, filtering/search, and card detail/edit flows.",
+    longDescription:
+      "KickCollect is a gamified football card collection platform built with Next.js and React. Users can open packs, browse and manage their card inventory, edit card details, and monitor collection progress through dashboard views. The app uses a modern TypeScript frontend stack with Tailwind/Radix-based UI patterns and test tooling for component and app-level reliability.",
+    image: "/images/projects/seebump.png",
+    imageColor: "bg-emerald-500",
+    tags: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Radix UI", "Vitest"],
+    githubUrl: "https://github.com/ghimpumihai/KickCollect",
+  },
+  {
+    slug: "quotation-service",
+    title: "Quarkus Quotation Platform",
+    description:
+      "An event-driven microservices backend built with Quarkus that orchestrates proposal management, USD→BRL quotation monitoring, and opportunity reporting via REST APIs, Kafka events, PostgreSQL, and Keycloak-secured endpoints.",
+    longDescription:
+      "Quarkus Quotation Platform is a multi-module backend composed of gateway, proposal, quotation, and report services. It combines synchronous REST orchestration with asynchronous Kafka messaging to process proposals, poll external currency data, detect quotation high-water marks, and generate report-ready opportunity records. The platform runs on Java/Quarkus with PostgreSQL persistence, Maven build workflows, and OIDC authentication via Keycloak.",
+    image: "/images/projects/skywind.png",
+    imageColor: "bg-indigo-600",
+    tags: ["Quarkus", "Java", "Kafka", "PostgreSQL", "Keycloak", "Docker", "Maven"],
+    githubUrl: "https://github.com/ghimpumihai/Quarkus-Quotation-Service",
+  },
 ]
