@@ -12,6 +12,16 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    slug: "neon-rain",
+    title: "Neon Rain",
+    description: "A fast-paced 2D neon arena game focused on competitive PvP, with local or room-based online matches, responsive controls, and polished visual effects.",
+    longDescription: "Neon Rain is a TypeScript game built with Vite and rendered on HTML5 Canvas. It combines local head-to-head gameplay with online multiplayer using a custom WebSocket protocol, room codes, ready states, and host/client state synchronization. The gameplay loop includes dashing, bombs, projectiles, powerups, particle effects, and mobile-friendly controls, while a Node.js server handles matchmaking and real-time message forwarding.",
+    image: "/images/projects/neon-rain.svg",
+    imageColor: "bg-cyan-500",
+    tags: ["TypeScript", "Vite", "HTML5 Canvas", "WebSocket", "Node.js", "Vitest"],
+    githubUrl: "https://github.com/ghimpumihai/Neon-Rain",
+  },
+  {
     slug: "healthcheck",
     title: "HealthCheck",
     description: "Solves delayed outage detection by continuously monitoring website uptime, HTTP status, and response metrics. Provides real-time analytics to ensure high availability for web services.",

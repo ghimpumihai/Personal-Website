@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="900" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#04060E"/>
+      <stop offset="1" stop-color="#091327"/>
+    </linearGradient>
+    <radialGradient id="glowLeft" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(420 320) rotate(12) scale(520 340)">
+      <stop stop-color="#00F5FF" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#00F5FF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowRight" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1200 610) rotate(-14) scale(500 300)">
+      <stop stop-color="#5BFF6E" stop-opacity="0.2"/>
+      <stop offset="1" stop-color="#5BFF6E" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="title" x1="450" y1="0" x2="1140" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#00F5FF"/>
+      <stop offset="1" stop-color="#5BFF6E"/>
+    </linearGradient>
+    <filter id="neonGlow" x="-40%" y="-40%" width="180%" height="180%" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#glowLeft)"/>
+  <rect width="1600" height="900" fill="url(#glowRight)"/>
+
+  <g stroke="#3DE8FF" stroke-opacity="0.35" stroke-width="2" stroke-linecap="round">
+    <line x1="120" y1="110" x2="80" y2="250"/>
+    <line x1="260" y1="120" x2="220" y2="290"/>
+    <line x1="420" y1="85" x2="370" y2="285"/>
+    <line x1="600" y1="100" x2="545" y2="325"/>
+    <line x1="760" y1="95" x2="705" y2="345"/>
+    <line x1="940" y1="105" x2="890" y2="330"/>
+    <line x1="1130" y1="90" x2="1080" y2="305"/>
+    <line x1="1300" y1="115" x2="1255" y2="290"/>
+    <line x1="1470" y1="105" x2="1425" y2="265"/>
+  </g>
+
+  <g opacity="0.9" filter="url(#neonGlow)">
+    <text x="800" y="475" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="152" font-weight="900" letter-spacing="10" fill="url(#title)">NEON RAIN</text>
+  </g>
+
+  <text x="800" y="550" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="36" font-weight="600" letter-spacing="4" fill="#C9F8FF" fill-opacity="0.78">COMPETITIVE PVP ARENA</text>
+
+  <rect x="180" y="680" width="1240" height="2" fill="#2DE9FF" fill-opacity="0.45"/>
+</svg>
