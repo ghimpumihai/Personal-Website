@@ -17,9 +17,10 @@ export function Header() {
   }, [pathname]);
 
   const navLinks = [
-    { name: "Experience", href: "#experience" },
-    { name: "Skills", href: "#skills" },
-    { name: "Projects", href: "#projects" },
+    { name: "Experience", href: "#experience", type: "section" as const },
+    { name: "Skills", href: "#skills", type: "section" as const },
+    { name: "Projects", href: "#projects", type: "section" as const },
+    { name: "Blog", href: "/blog", type: "page" as const },
   ];
 
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
@@ -56,13 +57,23 @@ export function Header() {
               <ul className="flex items-center gap-6 text-sm">
                 {navLinks.map((link) => (
                   <li key={link.name}>
-                    <a
-                      className="text-slate-500 transition hover:text-slate-900 dark:text-slate-400 dark:hover:text-white font-medium cursor-pointer"
-                      href={isHomePage ? link.href : `/#${link.href.replace(/.*\#/, "")}`}
-                      onClick={(e) => handleNavClick(e, link.href)}
-                    >
-                      {link.name}
-                    </a>
+                    {link.type === "page" ? (
+                      <Link
+                        className="text-slate-500 transition hover:text-slate-900 dark:text-slate-400 dark:hover:text-white font-medium"
+                        href={link.href}
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        {link.name}
+                      </Link>
+                    ) : (
+                      <a
+                        className="text-slate-500 transition hover:text-slate-900 dark:text-slate-400 dark:hover:text-white font-medium cursor-pointer"
+                        href={isHomePage ? link.href : `/#${link.href.replace(/.*\#/, "")}`}
+                        onClick={(e) => handleNavClick(e, link.href)}
+                      >
+                        {link.name}
+                      </a>
+                    )}
                   </li>
                 ))}
               </ul>
@@ -96,13 +107,23 @@ export function Header() {
               <ul className="flex flex-col gap-4">
                 {navLinks.map((link) => (
                   <li key={link.name}>
-                    <a
-                      className="block text-sm text-slate-500 transition hover:text-slate-900 dark:text-slate-400 dark:hover:text-white font-medium cursor-pointer"
-                      href={isHomePage ? link.href : `/#${link.href.replace(/.*\#/, "")}`}
-                      onClick={(e) => handleNavClick(e, link.href)}
-                    >
-                      {link.name}
-                    </a>
+                    {link.type === "page" ? (
+                      <Link
+                        className="block text-sm text-slate-500 transition hover:text-slate-900 dark:text-slate-400 dark:hover:text-white font-medium"
+                        href={link.href}
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        {link.name}
+                      </Link>
+                    ) : (
+                      <a
+                        className="block text-sm text-slate-500 transition hover:text-slate-900 dark:text-slate-400 dark:hover:text-white font-medium cursor-pointer"
+                        href={isHomePage ? link.href : `/#${link.href.replace(/.*\#/, "")}`}
+                        onClick={(e) => handleNavClick(e, link.href)}
+                      >
+                        {link.name}
+                      </a>
+                    )}
                   </li>
                 ))}
               </ul>
