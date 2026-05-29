@@ -4,6 +4,26 @@ export interface BlogContentBlock {
   language?: string;
 }
 
+function parseListItems(block: string) {
+  const lines = block.split("\n");
+  const items: string[] = [];
+
+  lines.forEach((line) => {
+    const listItemMatch = line.match(/^\s*-\s+(.+)/);
+
+    if (listItemMatch) {
+      items.push(listItemMatch[1].trim());
+      return;
+    }
+
+    if (items.length > 0 && line.trim()) {
+      items[items.length - 1] = `${items[items.length - 1]} ${line.trim()}`;
+    }
+  });
+
+  return items;
+}
+
 export function parseBlogContent(content: string): BlogContentBlock[] {
   const blocks: string[] = [];
   const lines = content.trim().split("\n");
@@ -81,17 +101,16 @@ export function parseBlogContent(content: string): BlogContentBlock[] {
       };
     }
 
-    const lines = block.split("\n").map((line) => line.trim());
-    const listItems = lines
-      .filter((line) => line.startsWith("- "))
-      .map((line) => line.replace(/^- /, "").trim());
+    const listItems = parseListItems(block);
 
-    if (listItems.length === lines.length && listItems.length > 0) {
+    if (listItems.length > 0 && block.trim().match(/^\s*-\s+/)) {
       return {
         type: "list" as const,
         content: listItems,
       };
     }
+
+    const lines = block.split("\n").map((line) => line.trim());
 
     return {
       type: "paragraph" as const,

@@ -91,4 +91,18 @@ describe("blog data", () => {
       { type: "list", content: ["Item one", "Item two"] },
     ]);
   });
+
+  it("parses long markdown list items", () => {
+    expect(
+      parseBlogContent(`- compile: This is the default scope.\n  Compile dependencies are propagated.\n- provided: This is not transitive.`),
+    ).toEqual([
+      {
+        type: "list",
+        content: [
+          "compile: This is the default scope. Compile dependencies are propagated.",
+          "provided: This is not transitive.",
+        ],
+      },
+    ]);
+  });
 });
