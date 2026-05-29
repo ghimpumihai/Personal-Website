@@ -82,11 +82,12 @@ describe("blog data", () => {
 
   it("parses blog content blocks", () => {
     expect(
-      parseBlogContent(`## Heading\n\nParagraph text.\n\n![Diagram](https://example.com/image.png)\n\n- Item one\n- Item two`),
+      parseBlogContent(`## Heading\n\nParagraph text.\n\n![Diagram](https://example.com/image.png)\n\n\`\`\`ts\nconst answer = 42;\n\`\`\`\n\n- Item one\n- Item two`),
     ).toEqual([
       { type: "heading", content: "Heading" },
       { type: "paragraph", content: "Paragraph text." },
       { type: "image", content: { alt: "Diagram", src: "https://example.com/image.png" } },
+      { type: "code", language: "ts", content: "const answer = 42;" },
       { type: "list", content: ["Item one", "Item two"] },
     ]);
   });

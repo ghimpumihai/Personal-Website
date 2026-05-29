@@ -70,6 +70,24 @@ export function BlogContentRenderer({ content }: BlogContentRendererProps) {
           );
         }
 
+        if (block.type === "code") {
+          return (
+            <figure
+              key={`${block.type}-${index}`}
+              className="overflow-hidden rounded-[1.25rem] border border-slate-800 bg-slate-950 shadow-[0_18px_45px_-35px_rgba(15,23,42,0.9)]"
+            >
+              {block.language && (
+                <figcaption className="border-b border-slate-800 px-4 py-2 font-mono text-xs uppercase tracking-[0.18em] text-amber-300">
+                  {block.language}
+                </figcaption>
+              )}
+              <pre className="overflow-x-auto p-5 text-sm leading-7 text-slate-100">
+                <code>{block.content as string}</code>
+              </pre>
+            </figure>
+          );
+        }
+
         return (
           <p
             key={`${block.type}-${index}`}

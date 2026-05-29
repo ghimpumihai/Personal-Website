@@ -458,6 +458,7 @@ export function AdminBlogPanel({
                 <p className="text-xs font-normal leading-6 text-slate-500 dark:text-slate-400">
                   Use `## Heading` for section titles, `- item` for bullet lists, and
                   `![Alt text](https://...)` to place images directly in the article.
+                  Wrap code between triple backticks to render it as a code block.
                 </p>
                 <textarea
                   ref={contentRef}
