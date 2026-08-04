@@ -28,7 +28,7 @@ export function Hero() {
             </h1>
             
             <p className="max-w-2xl text-lg text-slate-600 dark:text-slate-400 md:text-xl leading-relaxed mt-4">
-              I&apos;m <span className="font-semibold text-slate-900 dark:text-slate-100">Ștefan Ghimpu</span>, a Software Engineer Intern with real-world experience at BMW TechWorks, specializing in Java and Quarkus.
+              I&apos;m <span className="font-semibold text-slate-900 dark:text-slate-100">Ștefan Ghimpu</span>, currently a Working Student at Bosch and a Computer Science student at Babeș-Bolyai University. I specialize in developing scalable and efficient software solutions, with a strong focus on backend development, cloud technologies, and system architecture.
             </p>
           </div>
         </motion.div>

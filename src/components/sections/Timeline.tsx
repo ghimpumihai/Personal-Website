@@ -18,16 +18,26 @@ const experiences: ExperienceItem[] = [
   {
     id: "exp-1",
     type: "work",
+    title: "Working Student",
+    companyOrSchool: "Bosch",
+    period: "July 2026-Present",
+    description: [
+      "Building tools for internal teams to improve efficiency and productivity using Rust and Svelte",
+    ]
+  },
+  {
+    id: "exp-2",
+    type: "work",
     title: "Software Engineer Intern",
     companyOrSchool: "BMW TechWorks",
-    period: "November 2024 - Present",
+    period: "November 2025 - June 2026",
     description: [
       "Engineered and validated RESTful APIs using Java 17+ and Quarkus for high-performance enterprise systems.",
       "Collaborated with senior engineers to implement scalable, cloud-native solutions and refine complex business logic."
     ]
   },
   {
-    id: "exp-2",
+    id: "exp-3",
     type: "work",
     title: "Full-Stack Developer",
     companyOrSchool: "ROSPIN Satellite Data Processing",
@@ -38,7 +48,7 @@ const experiences: ExperienceItem[] = [
     ]
   },
   {
-    id: "exp-3",
+    id: "exp-4",
     type: "education",
     title: "Bachelor of Computer Science",
     companyOrSchool: "Babes-Bolyai University",

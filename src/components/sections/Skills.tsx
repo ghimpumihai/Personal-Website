@@ -9,8 +9,9 @@ const categories = [
     title: "Frontend",
     icon: Code,
     skills: [
-      { name: "React", iconClass: "devicon-react-original colored" },
-      { name: "Next.js", iconClass: "devicon-nextjs-plain dark:text-white" },
+    { name: "React", iconClass: "devicon-react-original colored" },
+    { name: "Next.js", iconClass: "devicon-nextjs-plain dark:text-white" },
+    { name: "Svelte", iconClass: "devicon-svelte-plain colored" },
       { name: "Angular", iconClass: "devicon-angularjs-plain colored" },
       { name: "TypeScript", iconClass: "devicon-typescript-plain colored" },
       { name: "HTML/CSS", iconClass: "devicon-html5-plain colored" },
@@ -23,6 +24,7 @@ const categories = [
     skills: [
       { name: "Java", iconClass: "devicon-java-plain colored" },
       { name: "C++", iconClass: "devicon-cplusplus-plain colored" },
+    { name: "Rust", iconClass: "devicon-rust-plain colored" },
       { name: "C#", iconClass: "devicon-csharp-plain colored" },
       { name: "Python", iconClass: "devicon-python-plain colored" },
       { name: ".NET", iconClass: "devicon-dot-net-plain colored" },
