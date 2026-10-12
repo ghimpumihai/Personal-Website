@@ -24,7 +24,7 @@
 			id: 'bmw',
 			code: '02 · BMW TECH',
 			label: 'Java & Quarkus',
-			role: 'Software Engineer Intern @ BMW TechWorks (Nov 2025 – June 2026)',
+			role: 'Software Engineer Intern @ BMW TechWorks Romania (Nov 2025 – June 2026)',
 			summary:
 				'Designed and validated high-performance RESTful APIs in Java 17+ and Quarkus for scalable enterprise cloud systems.',
 			stack: ['Java 17+', 'Quarkus', 'RESTful APIs', 'Cloud-Native'],
@@ -61,20 +61,20 @@
 			href: '/projects/seebump'
 		},
 		{
-			id: 'healthcheck',
-			code: '06 · .NET 8',
-			label: 'HealthCheck',
-			role: 'Real-Time Uptime & Latency Observatory',
+			id: 'jobscanr',
+			code: '06 · PYTHON',
+			label: 'JobScanr Radar',
+			role: 'Automated European Tech Job Radar (3,600+ Boards)',
 			summary:
-				'Continuous HTTP availability and response-time telemetry service built on C#, .NET 8+, and Angular 17+.',
-			stack: ['C#', '.NET 8+', 'Angular 17+', 'OpenAPI'],
-			href: '/projects/healthcheck'
+				'Scans 50,000+ postings daily across 7 ATS platforms with Groq AI self-healing link repair, Supabase storage, and daily email digests.',
+			stack: ['Python', 'PostgreSQL', 'Supabase', 'GitHub Actions', 'Groq LLM'],
+			href: '/projects/jobscanr'
 		}
 	];
 
 	const schematicRows = [
 		{ org: 'BOSCH', spec: 'Internal tooling · Rust & Svelte' },
-		{ org: 'BMW TECH', spec: 'Enterprise APIs · Java 17+ & Quarkus' },
+		{ org: 'BMW TECH', spec: 'BMW TechWorks Romania · Java 17+ & Quarkus' },
 		{ org: 'ROSPIN', spec: 'Satellite pipeline · Django & GEE' },
 		{ org: 'BBU CLUJ', spec: 'B.Sc. Computer Science (2024–2027)' }
 	];

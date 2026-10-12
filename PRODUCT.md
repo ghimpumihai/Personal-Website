@@ -16,7 +16,7 @@ Personal engineering portfolio and technical blog for Ștefan Ghimpu (Working St
 
 ## Positioning
 
-Combines hands-on enterprise and scientific engineering experience (Rust and Svelte internal tooling at Bosch, Java 17+ and Quarkus enterprise APIs at BMW TechWorks, Django and Google Earth Engine satellite imagery pipelines at ROSPIN) with shipped systems projects spanning distributed microservices, computer vision hardware/software integration, real-time WebSocket multiplayer, and uptime telemetry.
+Combines hands-on enterprise and scientific engineering experience (Rust and Svelte internal tooling at Bosch, Java 17+ and Quarkus enterprise APIs at BMW TechWorks Romania, Django and Google Earth Engine satellite imagery pipelines at ROSPIN) with shipped systems projects spanning distributed microservices, automated European job-radar scraping & AI self-healing pipelines, computer vision hardware/software integration, and real-time WebSocket multiplayer.
 
 ## Operating Context
 
@@ -47,12 +47,12 @@ SvelteKit (Svelte 5 runes) + TypeScript + Tailwind CSS (rewriting from the legac
 - Profile portrait: `/images/profile/profile.jpg`
 - Confirmed timeline entries:
   - Bosch — Working Student (July 2026 – Present): internal efficiency tools in Rust and Svelte.
-  - BMW TechWorks — Software Engineer Intern (Nov 2025 – June 2026): RESTful APIs in Java 17+ and Quarkus for cloud-native enterprise systems.
+  - BMW TechWorks Romania — Software Engineer Intern (Nov 2025 – June 2026): RESTful APIs in Java 17+ and Quarkus for cloud-native enterprise systems.
   - ROSPIN Satellite Data Processing — Full-Stack Developer (Oct – Dec 2025): Django backend with Google Earth Engine and React visualization dashboards.
   - Babeș-Bolyai University — Bachelor of Computer Science (2024 – 2027): algorithms, system architecture, high-performance data structures.
 - Confirmed projects (`src/lib/projects.ts`):
   - Neon Rain (`/images/projects/neon-rain.svg`, TypeScript, Vite, HTML5 Canvas, WebSocket, Node.js, Vitest)
-  - HealthCheck (`/images/projects/HealthCheck.jpg`, C#, .NET 8+, Angular 17+, TypeScript, OpenAPI)
+  - JobScanr (Python, PostgreSQL, Supabase, GitHub Actions, Groq LLM, REST & GraphQL)
   - SeeBump (`/images/projects/seebump.png`, Python, OpenCV, Next.js, TypeScript, Supabase, ESP32, C++)
   - SkyWind (`/images/projects/skywind.png` + YouTube demo, Django, Python, React, Google Earth Engine API, Docker)
   - KickCollect (Next.js, React, TypeScript, Tailwind CSS, Radix UI, Vitest)

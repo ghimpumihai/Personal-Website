@@ -28,7 +28,7 @@
 			code: 'LOG 02',
 			type: 'Work',
 			title: 'Software Engineer Intern',
-			companyOrSchool: 'BMW TechWorks',
+			companyOrSchool: 'BMW TechWorks Romania',
 			period: 'November 2025 – June 2026',
 			stack: ['Java 17+', 'Quarkus', 'REST APIs', 'Cloud'],
 			description: [

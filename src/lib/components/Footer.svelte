@@ -56,7 +56,7 @@
 					<li>03 · Kafka Microservices</li>
 					<li>04 · Earth Engine &amp; Python</li>
 					<li>05 · Computer Vision &amp; IoT</li>
-					<li>06 · .NET 8 Observability</li>
+					<li>06 · JobScanr ATS Radar</li>
 				</ul>
 			</div>
 		</div>
