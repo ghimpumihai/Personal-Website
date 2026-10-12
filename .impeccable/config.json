@@ -1,0 +1,89 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "codex-grid-background",
+        "value": "*",
+        "files": [
+          "src/app.css"
+        ],
+        "createdAt": "2026-10-12T21:17:28.373Z",
+        "reason": "user confirmed: Precision Engineering / Blueprints and Airy Architectural Drawing style"
+      },
+      {
+        "rule": "cream-palette",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/*.html"
+        ],
+        "createdAt": "2026-10-12T21:25:13.839Z",
+        "reason": "user confirmed: cream palette & architectural blueprint decision mock fixtures"
+      },
+      {
+        "rule": "italic-serif-display",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/*.html"
+        ],
+        "createdAt": "2026-10-12T21:25:13.845Z",
+        "reason": "user confirmed: cream palette & architectural blueprint decision mock fixtures"
+      },
+      {
+        "rule": "hero-eyebrow-chip",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/*.html"
+        ],
+        "createdAt": "2026-10-12T21:25:13.853Z",
+        "reason": "user confirmed: cream palette & architectural blueprint decision mock fixtures"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/*.html"
+        ],
+        "createdAt": "2026-10-12T21:25:13.859Z",
+        "reason": "user confirmed: cream palette & architectural blueprint decision mock fixtures"
+      },
+      {
+        "rule": "skipped-heading",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/*.html"
+        ],
+        "createdAt": "2026-10-12T21:25:13.865Z",
+        "reason": "user confirmed: cream palette & architectural blueprint decision mock fixtures"
+      },
+      {
+        "rule": "tight-leading",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/*.html"
+        ],
+        "createdAt": "2026-10-12T21:25:13.870Z",
+        "reason": "user confirmed: cream palette & architectural blueprint decision mock fixtures"
+      },
+      {
+        "rule": "numbered-section-labels",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/*.html"
+        ],
+        "createdAt": "2026-10-12T21:25:13.875Z",
+        "reason": "user confirmed: cream palette & architectural blueprint decision mock fixtures"
+      },
+      {
+        "rule": "codex-grid-background",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/*.html"
+        ],
+        "createdAt": "2026-10-12T21:25:13.880Z",
+        "reason": "user confirmed: cream palette & architectural blueprint decision mock fixtures"
+      }
+    ]
+  }
+}

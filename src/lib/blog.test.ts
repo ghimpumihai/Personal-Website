@@ -4,8 +4,8 @@ import {
   getAllBlogThemes,
   normalizeSlug,
   sortBlogPosts,
-} from "@/lib/blog";
-import { parseBlogContent } from "@/lib/blog-render";
+} from "$lib/blog";
+import { parseBlogContent } from "$lib/blog-render";
 
 describe("blog data", () => {
   it("orders posts from newest to oldest", () => {
