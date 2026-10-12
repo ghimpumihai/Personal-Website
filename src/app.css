@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	--bg-paper: #F6F2EA;
+	--bg-elevated: #EFE9DD;
+	--bg-card: #FAF7F1;
+	--ink-primary: #1E1B18;
+	--ink-muted: #4A443E;
+	--accent-copper: #9A3E20;
+	--accent-copper-soft: rgba(154, 62, 32, 0.10);
+	--line-subtle: #D8D0C1;
+	--line-strong: #B8AE9C;
+	--grid-line: rgba(30, 27, 24, 0.042);
+	color-scheme: light;
+}
+
+html.dark {
+	--bg-paper: #161412;
+	--bg-elevated: #1F1C19;
+	--bg-card: #24201D;
+	--ink-primary: #EAE3D5;
+	--ink-muted: #B8AEA0;
+	--accent-copper: #E07A56;
+	--accent-copper-soft: rgba(224, 122, 86, 0.14);
+	--line-subtle: #2E2925;
+	--line-strong: #463E38;
+	--grid-line: rgba(234, 227, 213, 0.035);
+	color-scheme: dark;
+}
+
+html {
+	scroll-behavior: smooth;
+	background-color: var(--bg-paper);
+	color: var(--ink-primary);
+	font-family: 'Public Sans', system-ui, sans-serif;
+	caret-color: var(--accent-copper);
+	scrollbar-color: var(--line-strong) var(--bg-paper);
+}
+
+body {
+	background-color: var(--bg-paper);
+	background-image:
+		linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+		linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+	background-size: 56px 56px;
+	color: var(--ink-primary);
+	transition: background-color 0.2s cubic-bezier(0.22, 1, 0.36, 1), color 0.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+::selection {
+	background-color: var(--accent-copper);
+	color: #FAF7F1;
+}
+
+::-webkit-scrollbar {
+	width: 10px;
+	height: 10px;
+}
+
+::-webkit-scrollbar-track {
+	background: var(--bg-paper);
+	border-left: 1px solid var(--line-subtle);
+}
+
+::-webkit-scrollbar-thumb {
+	background: var(--line-strong);
+	border: 2px solid var(--bg-paper);
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: var(--accent-copper);
+}
+
+:focus-visible {
+	outline: 2px solid var(--accent-copper);
+	outline-offset: 3px;
+}
+
+a {
+	text-underline-offset: 4px;
+}
+
+.font-mono,
+.tabular-nums {
+	font-variant-numeric: tabular-nums;
+}
+
+@keyframes sheetReveal {
+	from {
+		opacity: 0.01;
+		transform: translateY(10px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.sheet-enter {
+	animation: sheetReveal 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+	.sheet-enter {
+		animation: none;
+	}
+}

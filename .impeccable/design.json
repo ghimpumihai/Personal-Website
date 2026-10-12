@@ -1,0 +1,436 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-13T12:00:00.000Z",
+  "title": "Design System: Ștefan Ghimpu — Engineering Portfolio & Technical Blog",
+  "extensions": {
+    "colorMeta": {
+      "paper": {
+        "role": "neutral",
+        "displayName": "Warm Cotton Paper",
+        "canonical": "#F6F2EA",
+        "tonalRamp": [
+          "#242019",
+          "#423B30",
+          "#635949",
+          "#867965",
+          "#AA9C85",
+          "#CEC2AC",
+          "#E6DEC9",
+          "#F6F2EA"
+        ]
+      },
+      "paper-elevated": {
+        "role": "neutral",
+        "displayName": "Elevated Drafting Stone",
+        "canonical": "#EFE9DD",
+        "tonalRamp": [
+          "#221E17",
+          "#3F382C",
+          "#5F5544",
+          "#81745F",
+          "#A5967D",
+          "#C8BA9F",
+          "#DFD5C2",
+          "#EFE9DD"
+        ]
+      },
+      "paper-card": {
+        "role": "neutral",
+        "displayName": "Specification Plate Cream",
+        "canonical": "#FAF7F1",
+        "tonalRamp": [
+          "#26221C",
+          "#453E34",
+          "#675E50",
+          "#8B7F6D",
+          "#B0A38E",
+          "#D4C9B6",
+          "#EBE4D8",
+          "#FAF7F1"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Deep Espresso Ink",
+        "canonical": "#1E1B18",
+        "tonalRamp": [
+          "#1E1B18",
+          "#36312C",
+          "#514A43",
+          "#6E655C",
+          "#8D8278",
+          "#ADA297",
+          "#CFC6BC",
+          "#EDE8E2"
+        ]
+      },
+      "ink-muted": {
+        "role": "neutral",
+        "displayName": "Muted Walnut Ink",
+        "canonical": "#4A443E",
+        "tonalRamp": [
+          "#23201D",
+          "#39342F",
+          "#4A443E",
+          "#696159",
+          "#898076",
+          "#AAA096",
+          "#CBC3BA",
+          "#ECE7E1"
+        ]
+      },
+      "copper": {
+        "role": "primary",
+        "displayName": "Oxidized Copper Ink",
+        "canonical": "#9A3E20",
+        "tonalRamp": [
+          "#361307",
+          "#57200E",
+          "#782E16",
+          "#9A3E20",
+          "#BD5736",
+          "#D97757",
+          "#EBA289",
+          "#F8D5C8"
+        ]
+      },
+      "copper-soft": {
+        "role": "primary",
+        "displayName": "Soft Copper Wash",
+        "canonical": "rgba(154, 62, 32, 0.10)",
+        "tonalRamp": [
+          "#361307",
+          "#57200E",
+          "#782E16",
+          "#9A3E20",
+          "#BD5736",
+          "#D97757",
+          "#EBA289",
+          "#F5E6DE"
+        ]
+      },
+      "hairline": {
+        "role": "neutral",
+        "displayName": "Subtle Architectural Hairline",
+        "canonical": "#D8D0C1",
+        "tonalRamp": [
+          "#23201A",
+          "#403B30",
+          "#605848",
+          "#827863",
+          "#A59980",
+          "#C4B9A2",
+          "#D8D0C1",
+          "#F1EDE5"
+        ]
+      },
+      "hairline-strong": {
+        "role": "neutral",
+        "displayName": "Strong Structural Hairline",
+        "canonical": "#B8AE9C",
+        "tonalRamp": [
+          "#221F1A",
+          "#3E3930",
+          "#5D5649",
+          "#7E7564",
+          "#9E9481",
+          "#B8AE9C",
+          "#D6CFC1",
+          "#EFECE5"
+        ]
+      },
+      "grid-line": {
+        "role": "neutral",
+        "displayName": "Drafting Grid Line",
+        "canonical": "rgba(30, 27, 24, 0.042)",
+        "tonalRamp": [
+          "#1E1B18",
+          "#3A352F",
+          "#595149",
+          "#7A7066",
+          "#9C9186",
+          "#BEB4A9",
+          "#DFD8CF",
+          "#F3EFE8"
+        ]
+      },
+      "dark-paper": {
+        "role": "neutral",
+        "displayName": "Soft Espresso Ground (Dark Mode)",
+        "canonical": "#161412",
+        "tonalRamp": [
+          "#161412",
+          "#2A2622",
+          "#423C36",
+          "#5D554D",
+          "#7A7066",
+          "#9A8F84",
+          "#BDB3A8",
+          "#E2DBD2"
+        ]
+      },
+      "dark-paper-elevated": {
+        "role": "neutral",
+        "displayName": "Elevated Espresso Tray (Dark Mode)",
+        "canonical": "#1F1C19",
+        "tonalRamp": [
+          "#161412",
+          "#1F1C19",
+          "#36312C",
+          "#514942",
+          "#6F655C",
+          "#8F8479",
+          "#B2A79C",
+          "#D8CFC5"
+        ]
+      },
+      "dark-paper-card": {
+        "role": "neutral",
+        "displayName": "Dark Specification Plate (Dark Mode)",
+        "canonical": "#24201D",
+        "tonalRamp": [
+          "#181513",
+          "#24201D",
+          "#3B3530",
+          "#564E47",
+          "#746A61",
+          "#94897F",
+          "#B7ACA2",
+          "#DDD4CA"
+        ]
+      },
+      "dark-ink": {
+        "role": "neutral",
+        "displayName": "Warm Parchment Ink (Dark Mode)",
+        "canonical": "#EAE3D5",
+        "tonalRamp": [
+          "#23201A",
+          "#403A30",
+          "#605748",
+          "#827763",
+          "#A59880",
+          "#C8BA9F",
+          "#DBD1BE",
+          "#EAE3D5"
+        ]
+      },
+      "dark-ink-muted": {
+        "role": "neutral",
+        "displayName": "Muted Stone Ink (Dark Mode)",
+        "canonical": "#B8AEA0",
+        "tonalRamp": [
+          "#221F1B",
+          "#3E3932",
+          "#5D564C",
+          "#7E7568",
+          "#9D9384",
+          "#B8AEA0",
+          "#D5CEC3",
+          "#EFECE7"
+        ]
+      },
+      "dark-copper": {
+        "role": "primary",
+        "displayName": "Warm Terracotta Ink (Dark Mode)",
+        "canonical": "#E07A56",
+        "tonalRamp": [
+          "#381508",
+          "#5B2410",
+          "#80341A",
+          "#A54727",
+          "#C65F3C",
+          "#E07A56",
+          "#EDA48A",
+          "#F8D5C8"
+        ]
+      },
+      "dark-copper-soft": {
+        "role": "primary",
+        "displayName": "Dark Copper Wash (Dark Mode)",
+        "canonical": "rgba(224, 122, 86, 0.14)",
+        "tonalRamp": [
+          "#2B160F",
+          "#452216",
+          "#64301F",
+          "#874029",
+          "#AC5438",
+          "#CE6B4B",
+          "#E07A56",
+          "#F2B9A4"
+        ]
+      },
+      "dark-hairline": {
+        "role": "neutral",
+        "displayName": "Dark Subtle Hairline (Dark Mode)",
+        "canonical": "#2E2925",
+        "tonalRamp": [
+          "#191614",
+          "#2E2925",
+          "#47403A",
+          "#635951",
+          "#81756B",
+          "#A1958A",
+          "#C3B8AD",
+          "#E6DFD7"
+        ]
+      },
+      "dark-hairline-strong": {
+        "role": "neutral",
+        "displayName": "Dark Strong Hairline (Dark Mode)",
+        "canonical": "#463E38",
+        "tonalRamp": [
+          "#1C1916",
+          "#302B26",
+          "#463E38",
+          "#635850",
+          "#82756B",
+          "#A2958A",
+          "#C4B8AD",
+          "#E7E0D8"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Hero thesis statement and primary page headers (Spectral 400 with 600 copper span)."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Full-width section header banners (Spectral 400, 36px)."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Project specification plate titles, experience role titles, and sidebar headings (Spectral 600, 24px)."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Engineering descriptions, case study prose, and article paragraphs (Public Sans 400, 64ch–70ch max measure)."
+      },
+      "label": {
+        "displayName": "Label / Coordinate",
+        "purpose": "Tabular monospace coordinates, section stamps, navigation cells, and stack chips (Azeret Mono 500/600, 12px)."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "ease-sheet",
+        "value": "cubic-bezier(0.22, 1, 0.36, 1)",
+        "purpose": "Default easing curve for theme surface transitions (0.2s) and .sheet-enter page reveal (0.45s)."
+      }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" },
+      { "name": "sheet-max", "value": "1360px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Action Stamp",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Primary architectural CTA button with solid oxidized copper fill, 0px corners, and inline vector arrow.",
+      "html": "<a href=\"#projects\" class=\"ds-btn-primary\"><span>EXPLORE PROJECTS (6)</span><svg class=\"ds-btn-icon\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" aria-hidden=\"true\"><path d=\"M2.5 8h11M9.5 4l4 4-4 4\"/></svg></a>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; gap: 8px; background: var(--accent-copper, #9A3E20); color: #FAF7F1; border: 1px solid var(--accent-copper, #9A3E20); border-radius: 0px; padding: 12px 20px; font-family: 'Azeret Mono', monospace; font-size: 12px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.05em; text-decoration: none; font-variant-numeric: tabular-nums; transition: opacity 0.15s ease; } .ds-btn-primary:hover { opacity: 0.9; } .ds-btn-primary:focus-visible { outline: 2px solid var(--accent-copper, #9A3E20); outline-offset: 3px; } .ds-btn-icon { width: 14px; height: 14px; }"
+    },
+    {
+      "name": "Secondary Specification Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Secondary action button on specification plate cream with strong hairline border that shifts to copper on hover.",
+      "html": "<a href=\"/blog\" class=\"ds-btn-secondary\">READ TECHNICAL BLOG</a>",
+      "css": ".ds-btn-secondary { display: inline-flex; align-items: center; gap: 8px; background: var(--bg-card, #FAF7F1); color: var(--ink-primary, #1E1B18); border: 1px solid var(--line-strong, #B8AE9C); border-radius: 0px; padding: 12px 20px; font-family: 'Azeret Mono', monospace; font-size: 12px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.05em; text-decoration: none; transition: border-color 0.15s ease, color 0.15s ease; } .ds-btn-secondary:hover { border-color: var(--accent-copper, #9A3E20); color: var(--accent-copper, #9A3E20); } .ds-btn-secondary:focus-visible { outline: 2px solid var(--accent-copper, #9A3E20); outline-offset: 3px; }"
+    },
+    {
+      "name": "Specification & Theme Filter Chips",
+      "kind": "chip",
+      "refersTo": "chip-filter-active",
+      "description": "Sharp-edged Azeret Mono technology tags and interactive blog theme filter buttons in active and default states.",
+      "html": "<div class=\"ds-chip-group\"><button type=\"button\" class=\"ds-chip ds-chip-active\">LOG 01 · RUST &amp; SVELTE</button><button type=\"button\" class=\"ds-chip\">JAVA 17+ / QUARKUS</button><span class=\"ds-chip-readonly\">APACHE KAFKA</span></div>",
+      "css": ".ds-chip-group { display: flex; flex-wrap: wrap; gap: 8px; } .ds-chip, .ds-chip-readonly { display: inline-flex; align-items: center; border-radius: 0px; padding: 4px 12px; font-family: 'Azeret Mono', monospace; font-size: 12px; line-height: 1.33; font-variant-numeric: tabular-nums; background: var(--bg-paper, #F6F2EA); color: var(--ink-muted, #4A443E); border: 1px solid var(--line-subtle, #D8D0C1); cursor: pointer; transition: border-color 0.15s ease, color 0.15s ease, background-color 0.15s ease; } .ds-chip:hover { border-color: var(--accent-copper, #9A3E20); color: var(--ink-primary, #1E1B18); } .ds-chip:focus-visible { outline: 2px solid var(--accent-copper, #9A3E20); outline-offset: 3px; } .ds-chip-active { border-color: var(--accent-copper, #9A3E20); background: var(--accent-copper-soft, rgba(154, 62, 32, 0.10)); color: var(--accent-copper, #9A3E20); font-weight: 600; } .ds-chip-readonly { color: var(--ink-primary, #1E1B18); cursor: default; padding: 4px 10px; }"
+    },
+    {
+      "name": "Architectural Title Block Navigation",
+      "kind": "nav",
+      "refersTo": "card-plate",
+      "description": "Sticky top navigation bar divided into 1px hairline cells with copper monogram stamp, route cells, and theme toggle.",
+      "html": "<header class=\"ds-nav-bar\"><a href=\"/\" class=\"ds-nav-brand\"><span class=\"ds-nav-stamp\">ȘG</span><span class=\"ds-nav-title\">Ștefan Ghimpu</span></a><nav class=\"ds-nav-links\"><a href=\"/\" class=\"ds-nav-link ds-nav-link-active\">HOME</a><a href=\"/#projects\" class=\"ds-nav-link\">PROJECTS</a><a href=\"/blog\" class=\"ds-nav-link\">BLOG</a></nav><div class=\"ds-nav-meta\">CLUJ-NAPOCA · SCALE 1:1</div></header>",
+      "css": ".ds-nav-bar { display: flex; align-items: stretch; justify-content: space-between; background: var(--bg-card, #FAF7F1); border-top: 1px solid var(--line-strong, #B8AE9C); border-bottom: 1px solid var(--line-strong, #B8AE9C); border-left: 1px solid var(--line-strong, #B8AE9C); border-right: 1px solid var(--line-strong, #B8AE9C); } .ds-nav-brand { display: flex; align-items: center; gap: 12px; padding: 14px 20px; border-right: 1px solid var(--line-subtle, #D8D0C1); text-decoration: none; transition: background-color 0.15s ease; } .ds-nav-brand:hover { background: var(--bg-elevated, #EFE9DD); } .ds-nav-stamp { border: 1px solid var(--accent-copper, #9A3E20); background: var(--accent-copper-soft, rgba(154, 62, 32, 0.10)); color: var(--accent-copper, #9A3E20); padding: 2px 8px; font-family: 'Azeret Mono', monospace; font-size: 12px; font-weight: 600; } .ds-nav-title { font-family: 'Spectral', Georgia, serif; font-size: 18px; font-weight: 600; color: var(--ink-primary, #1E1B18); } .ds-nav-links { display: flex; align-items: stretch; } .ds-nav-link { display: flex; align-items: center; padding: 0 20px; border-right: 1px solid var(--line-subtle, #D8D0C1); font-family: 'Azeret Mono', monospace; font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--ink-muted, #4A443E); text-decoration: none; transition: background-color 0.15s ease, color 0.15s ease; } .ds-nav-link:hover { background: var(--bg-elevated, #EFE9DD); color: var(--ink-primary, #1E1B18); } .ds-nav-link-active { background: var(--accent-copper-soft, rgba(154, 62, 32, 0.10)); color: var(--accent-copper, #9A3E20); font-weight: 600; } .ds-nav-meta { display: flex; align-items: center; padding: 0 16px; font-family: 'Azeret Mono', monospace; font-size: 12px; color: var(--ink-muted, #4A443E); font-variant-numeric: tabular-nums; }"
+    },
+    {
+      "name": "Project Specification Plate Card",
+      "kind": "card",
+      "refersTo": "card-plate",
+      "description": "Flush hairline-bordered specification cell with plate code header strip, DOM topology diagram, Spectral title, and repository footer.",
+      "html": "<article class=\"ds-plate-card\"><div class=\"ds-plate-body\"><div class=\"ds-plate-header\"><span class=\"ds-plate-code\">PLT-06 // EVENT MICROSERVICES</span><span class=\"ds-plate-spec\">SPEC <svg class=\"ds-plate-arrow\" viewBox=\"0 0 12 12\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" aria-hidden=\"true\"><path d=\"M2 6h8M6.5 2.5L10 6 6.5 9.5\"/></svg></span></div><div class=\"ds-plate-topology\"><div class=\"ds-topo-node\"><span class=\"ds-topo-code\">GATEWAY</span><span class=\"ds-topo-sub\">Keycloak</span></div><svg class=\"ds-topo-vec\" viewBox=\"0 0 20 12\" fill=\"none\"><line x1=\"0\" y1=\"6\" x2=\"16\" y2=\"6\" stroke=\"currentColor\" stroke-width=\"1.25\"/><path d=\"M13 3l4 3-4 3\" stroke=\"currentColor\" stroke-width=\"1.25\"/></svg><div class=\"ds-topo-node ds-topo-node-active\"><span class=\"ds-topo-code\">KAFKA BUS</span><span class=\"ds-topo-sub\">USD→BRL</span></div><svg class=\"ds-topo-vec\" viewBox=\"0 0 20 12\" fill=\"none\"><line x1=\"0\" y1=\"6\" x2=\"16\" y2=\"6\" stroke=\"currentColor\" stroke-width=\"1.25\"/><path d=\"M13 3l4 3-4 3\" stroke=\"currentColor\" stroke-width=\"1.25\"/></svg><div class=\"ds-topo-node\"><span class=\"ds-topo-code\">POSTGRES</span><span class=\"ds-topo-sub\">Reports</span></div></div><h3 class=\"ds-plate-title\">Quotation Service</h3><p class=\"ds-plate-desc\">Multi-module Quarkus backend combining synchronous REST gateways with asynchronous Kafka streams and Keycloak OIDC.</p></div><div class=\"ds-plate-footer\"><span class=\"ds-plate-link\">Code (GitHub)</span><span class=\"ds-plate-muted\">PLT-06</span></div></article>",
+      "css": ".ds-plate-card { display: flex; flex-direction: column; justify-content: space-between; background: var(--bg-card, #FAF7F1); border: 1px solid var(--line-subtle, #D8D0C1); border-radius: 0px; transition: background-color 0.15s ease; max-width: 420px; } .ds-plate-card:hover { background: var(--bg-elevated, #EFE9DD); } .ds-plate-body { padding: 24px; } .ds-plate-header { display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--line-subtle, #D8D0C1); padding-bottom: 12px; font-family: 'Azeret Mono', monospace; font-size: 12px; font-variant-numeric: tabular-nums; } .ds-plate-code { font-weight: 600; color: var(--accent-copper, #9A3E20); } .ds-plate-spec { display: inline-flex; align-items: center; gap: 4px; color: var(--ink-muted, #4A443E); } .ds-plate-card:hover .ds-plate-spec { color: var(--accent-copper, #9A3E20); } .ds-plate-arrow { width: 12px; height: 12px; } .ds-plate-topology { margin-top: 16px; padding: 16px; background: var(--bg-elevated, #EFE9DD); border: 1px solid var(--line-subtle, #D8D0C1); display: grid; grid-template-columns: 1fr 20px 1fr 20px 1fr; align-items: center; font-family: 'Azeret Mono', monospace; font-size: 11px; } .ds-topo-node { border: 1px solid var(--line-strong, #B8AE9C); background: var(--bg-card, #FAF7F1); padding: 8px 4px; text-align: center; } .ds-topo-node-active { border-color: var(--accent-copper, #9A3E20); background: var(--accent-copper-soft, rgba(154, 62, 32, 0.10)); } .ds-topo-code { display: block; font-weight: 600; color: var(--accent-copper, #9A3E20); } .ds-topo-sub { color: var(--ink-muted, #4A443E); } .ds-topo-vec { width: 20px; height: 12px; color: var(--accent-copper, #9A3E20); } .ds-plate-title { margin: 20px 0 0 0; font-family: 'Spectral', Georgia, serif; font-size: 24px; font-weight: 600; color: var(--ink-primary, #1E1B18); transition: color 0.15s ease; } .ds-plate-card:hover .ds-plate-title { color: var(--accent-copper, #9A3E20); } .ds-plate-desc { margin: 10px 0 0 0; font-family: 'Public Sans', system-ui, sans-serif; font-size: 15px; line-height: 1.6; color: var(--ink-muted, #4A443E); } .ds-plate-footer { display: flex; align-items: center; justify-content: space-between; border-top: 1px solid var(--line-subtle, #D8D0C1); background: var(--bg-paper, #F6F2EA); padding: 14px 24px; font-family: 'Azeret Mono', monospace; font-size: 12px; } .ds-plate-link { font-weight: 500; color: var(--ink-primary, #1E1B18); } .ds-plate-muted { color: var(--ink-muted, #4A443E); }"
+    },
+    {
+      "name": "Interactive System Node Selector",
+      "kind": "custom",
+      "refersTo": "card-plate",
+      "description": "Hero 6-node career and architecture selector pairing tabular node buttons with a live specification readout bar.",
+      "html": "<div class=\"ds-node-selector\"><div class=\"ds-node-grid\"><button type=\"button\" class=\"ds-node-cell ds-node-cell-active\"><span class=\"ds-node-idx\">01 · BOSCH</span><span class=\"ds-node-lbl\">Rust &amp; Svelte</span></button><button type=\"button\" class=\"ds-node-cell\"><span class=\"ds-node-idx\">02 · BMW TECH</span><span class=\"ds-node-lbl\">Java &amp; Quarkus</span></button><button type=\"button\" class=\"ds-node-cell\"><span class=\"ds-node-idx\">03 · ROSPIN</span><span class=\"ds-node-lbl\">Earth Engine</span></button></div><div class=\"ds-node-readout\"><div><div class=\"ds-node-role\">Working Student @ Bosch (July 2026 – Present)</div><p class=\"ds-node-summary\">Engineering internal developer tools that streamline workflows and boost daily engineering productivity across teams.</p></div></div></div>",
+      "css": ".ds-node-selector { border-top: 1px solid var(--line-subtle, #D8D0C1); padding-top: 16px; } .ds-node-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; } .ds-node-cell { border: 1px solid var(--line-strong, #B8AE9C); background: var(--bg-card, #FAF7F1); color: var(--ink-muted, #4A443E); padding: 12px; text-align: left; font-family: 'Azeret Mono', monospace; font-size: 12px; border-radius: 0px; cursor: pointer; transition: border-color 0.15s ease, background-color 0.15s ease; } .ds-node-cell:hover { border-color: var(--accent-copper, #9A3E20); } .ds-node-cell:focus-visible { outline: 2px solid var(--accent-copper, #9A3E20); outline-offset: 3px; } .ds-node-cell-active { border-color: var(--accent-copper, #9A3E20); background: var(--accent-copper-soft, rgba(154, 62, 32, 0.10)); color: var(--ink-primary, #1E1B18); } .ds-node-idx { display: block; font-weight: 600; color: var(--accent-copper, #9A3E20); } .ds-node-lbl { display: block; margin-top: 2px; } .ds-node-readout { margin-top: 12px; border: 1px solid var(--line-subtle, #D8D0C1); background: var(--bg-card, #FAF7F1); padding: 16px; } .ds-node-role { font-family: 'Azeret Mono', monospace; font-size: 12px; font-weight: 600; color: var(--accent-copper, #9A3E20); } .ds-node-summary { margin: 4px 0 0 0; font-family: 'Public Sans', system-ui, sans-serif; font-size: 14px; color: var(--ink-muted, #4A443E); line-height: 1.5; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Architectural Field Guide & Plan",
+    "overview": "This system frames Ștefan Ghimpu’s engineering portfolio and technical blog as an open architectural specification manual drafted on warm cotton paper. Rather than relying on decorative gradients, floating cards, or dark-neon developer clichés, the interface organizes production history, system topologies, and long-form engineering essays into a continuous hairline-ruled sheet. Every section reads like a verified plate in a single technical folio—calm, low-glare, and structured for rapid inspection by engineers and hiring managers.\n\nTypography and geometry do the structural work. Editorial serif headings (`Spectral`) establish intellectual weight and human authorship, neutral neo-grotesque body copy (`Public Sans`) sustains effortless reading across architectural case studies, and tabular monospace labels (`Azeret Mono`) anchor revision stamps, plate coordinates, and technology tags. Surfaces sit flush against shared 1px rules on a subtle 56px drafting grid, transitioning smoothly between Warm Cream paper by default and a low-glare Soft Espresso dark mode.",
+    "keyCharacteristics": [
+      "Continuous `1360px` architectural sheet bounded by 1px structural hairlines over a `56px × 56px` drafting grid canvas",
+      "Zero-radius (`0px`), zero-shadow geometry where hierarchy comes from tonal paper shifts and shared cell borders",
+      "Tri-voice typography pairing editorial `Spectral` headings, `Public Sans` prose, and tabular `Azeret Mono` specification stamps",
+      "Single-accent Oxidized Copper ink (`#9A3E20` light / `#E07A56` dark) reserved for active nodes, primary actions, schematic connectors, and plate indices",
+      "Built-in schematic diagrams and specification plates that present backend, IoT, and distributed systems architecture directly in the DOM"
+    ],
+    "rules": [
+      {
+        "name": "The Single Copper Trace Rule",
+        "body": "Oxidized Copper (`#9A3E20` / `#E07A56`) is the sole chromatic accent in the entire system. Never introduce secondary status hues, syntax-highlighting rainbows, or decorative gradients; all emphasis, state changes, and schematic vectors run through copper ink and its translucent wash.",
+        "section": "colors"
+      },
+      {
+        "name": "The Low-Glare Paper Rule",
+        "body": "Pure white (`#FFFFFF`) and pure black (`#000000`) are never used for surfaces or text. Every light and dark surface must resolve to the warm cotton/stone or espresso/charcoal token triad so long-form reading remains effortless.",
+        "section": "colors"
+      },
+      {
+        "name": "The Tabular Coordinate Rule",
+        "body": "Every code stamp, date, count, coordinate, and navigation item uses `Azeret Mono` at `12px` (`text-xs`) with `font-variant-numeric: tabular-nums` so numbers and indices align vertically across rows and specification plates.",
+        "section": "typography"
+      },
+      {
+        "name": "The Unstacked Heading Rule",
+        "body": "Section headings (`h1`, `h2`) never carry a small uppercase eyebrow stacked directly above them; section index metadata (`SEC 01 // ...`) sits at the opposite end of the header bar aligned to the baseline (`sm:flex-row sm:items-baseline justify-between`).",
+        "section": "typography"
+      },
+      {
+        "name": "The Zero-Shadow Drafting Rule",
+        "body": "Never apply `box-shadow`, `drop-shadow`, or `backdrop-filter: blur()` to any element. Elevation is achieved by nesting `--bg-card` plates inside `--bg-elevated` trays with a `1px solid var(--line-strong)` border, or recessing `--bg-paper` tags inside `--bg-card` containers.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Sheet Reveal Motion Rule",
+        "body": "Page transitions use a single restrained entrance animation (`.sheet-enter`: `opacity: 0.01; transform: translateY(10px)` to `opacity: 1; transform: translateY(0)` over `0.45s cubic-bezier(0.22, 1, 0.36, 1)`), disabled automatically under `prefers-reduced-motion: reduce`.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do bound all top-level page content inside the `max-w-[1360px] border-x border-hairline-strong` architectural sheet so header, main sections, and footer align along continuous vertical rules.",
+      "Do pair every section and card header with a `12px` `Azeret Mono` tabular coordinate (`SEC 01 // ...`, `PLT-01 // ...`, `NOTE 01 // ...`) separated by a `1px` hairline rule.",
+      "Do use sharp `0px` corners, `1px` solid or dashed hairlines, and `6px × 6px` square copper list markers (`h-1.5 w-1.5 bg-copper`) across all lists and plates.",
+      "Do use inline SVG vector strokes (`stroke=\"currentColor\"`, `stroke-width=\"1.25\"` to `1.75\"`) for directional arrows, schematic connectors, and controls.",
+      "Do maintain full parity between Warm Cream light mode and Soft Espresso dark mode by referencing CSS custom properties (`--bg-paper`, `--bg-elevated`, `--bg-card`, `--ink-primary`, `--ink-muted`, `--accent-copper`, `--line-subtle`, `--line-strong`)."
+    ],
+    "donts": [
+      "Don't apply border-radius (`rounded-md`, `rounded-lg`, `rounded-full`), drop shadows (`shadow-sm`, `shadow-lg`), or backdrop blur to cards, buttons, portraits, or badges.",
+      "Don't stack small uppercase kicker or eyebrow labels directly above `h1` or `h2` headings; keep section coordinates in the right-hand slot of the section header bar or inside a bordered metadata ledger strip.",
+      "Don't introduce secondary accent colors (blue, green, purple, amber) or neon dark-mode highlights; Oxidized Copper (`#9A3E20` / `#E07A56`) is the single chromatic signal.",
+      "Don't leave project media frames blank when a system lacks a screenshot; render a structured 3-node DOM architecture topology plate inside the `aspect-video` frame."
+    ]
+  }
+}

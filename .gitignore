@@ -9,9 +9,19 @@
 # testing
 /coverage
 
-# next.js
+# next.js & sveltekit
 /.next/
+/.svelte-kit/
 /out/
+
+# impeccable runtime & review artifacts
+.impeccable/hook.cache.json
+.impeccable/review/
+.impeccable/mocks/
+.impeccable/decision-payload*.json
+.impeccable/mobile-payload.json
+.impeccable/surface-brief-body.md
+/test-results/
 
 # production
 /build
@@ -40,3 +50,4 @@ next-env.d.ts
 plan.md
 .scannerwork
 /playwright-report
+.impeccable/questions/
