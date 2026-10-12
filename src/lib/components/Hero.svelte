@@ -22,7 +22,7 @@
 		},
 		{
 			id: 'bmw',
-			code: '02 · TECHWORKS',
+			code: '02 · BMW TECHWORKS',
 			label: 'Java & Quarkus',
 			role: 'Software Engineer Intern @ BMW TechWorks Romania (Nov 2025 – June 2026)',
 			summary:
@@ -74,7 +74,7 @@
 
 	const schematicRows = [
 		{ org: 'BOSCH', spec: 'Internal tooling · Rust & Svelte' },
-		{ org: 'TECHWORKS', spec: 'BMW TechWorks Romania · Java 17+ & Quarkus' },
+		{ org: 'BMW', spec: 'BMW TechWorks Romania · Java 17+ & Quarkus' },
 		{ org: 'ROSPIN', spec: 'Satellite pipeline · Django & GEE' },
 		{ org: 'BBU CLUJ', spec: 'B.Sc. Computer Science (2024–2027)' }
 	];
