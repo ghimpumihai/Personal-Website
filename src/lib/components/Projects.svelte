@@ -60,6 +60,51 @@
 								alt={project.title}
 								class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.03]"
 							/>
+						{:else if project.slug === 'jobscanr'}
+							<div
+								class="flex h-full w-full flex-col justify-between bg-paper-elevated p-4 font-mono text-xs sm:p-5"
+							>
+								<div class="flex justify-between border-b border-hairline pb-2 text-copper">
+									<span>PIPELINE // 3,600+ EU CAREER BOARDS</span>
+									<span>PYTHON + SUPABASE</span>
+								</div>
+								<div class="my-auto grid grid-cols-[1fr_20px_1fr_20px_1fr] items-center py-2">
+									<div class="border border-hairline-strong bg-paper-card p-2 text-center">
+										<span class="block font-semibold text-copper">7 ATS APIS</span>
+										<span class="text-ink-muted">50k+ Jobs</span>
+									</div>
+									<svg
+										class="h-3 w-5 text-copper"
+										viewBox="0 0 20 12"
+										fill="none"
+										aria-hidden="true"
+									>
+										<line x1="0" y1="6" x2="16" y2="6" stroke="currentColor" stroke-width="1.25" />
+										<path d="M13 3l4 3-4 3" stroke="currentColor" stroke-width="1.25" />
+									</svg>
+									<div class="border border-copper bg-copper-soft p-2 text-center">
+										<span class="block font-semibold text-copper">AI HEALER</span>
+										<span class="text-ink">Groq + Filter</span>
+									</div>
+									<svg
+										class="h-3 w-5 text-copper"
+										viewBox="0 0 20 12"
+										fill="none"
+										aria-hidden="true"
+									>
+										<line x1="0" y1="6" x2="16" y2="6" stroke="currentColor" stroke-width="1.25" />
+										<path d="M13 3l4 3-4 3" stroke="currentColor" stroke-width="1.25" />
+									</svg>
+									<div class="border border-hairline-strong bg-paper-card p-2 text-center">
+										<span class="block font-semibold text-copper">DIGEST</span>
+										<span class="text-ink-muted">06:00 UTC</span>
+									</div>
+								</div>
+								<div class="flex justify-between border-t border-hairline pt-2 text-ink-muted">
+									<span>GITHUB ACTIONS CRON · $0/MO</span>
+									<span>FIG 02</span>
+								</div>
+							</div>
 						{:else if project.slug === 'kickcollect'}
 							<div
 								class="flex h-full w-full flex-col justify-between bg-paper-elevated p-4 font-mono text-xs sm:p-5"

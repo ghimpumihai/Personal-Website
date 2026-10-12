@@ -4,21 +4,21 @@ test.describe('Projects Routing & Detail Pages', () => {
   test('Homepage has clickable project card links to all 3 detail pages', async ({ page }) => {
     await page.goto('/');
 
-    await expect(page.locator('a[href="/projects/healthcheck"]')).toBeVisible();
+    await expect(page.locator('a[href="/projects/jobscanr"]')).toBeVisible();
     await expect(page.locator('a[href="/projects/seebump"]')).toBeVisible();
     await expect(page.locator('a[href="/projects/skywind"]')).toBeVisible();
   });
 
-  test('/projects/healthcheck renders expected content', async ({ page }) => {
-    await page.goto('/projects/healthcheck');
+  test('/projects/jobscanr renders expected content', async ({ page }) => {
+    await page.goto('/projects/jobscanr');
 
-    await expect(page.getByRole('heading', { level: 1, name: 'HealthCheck' })).toBeVisible();
-    await expect(page.getByText('Solves delayed outage detection', { exact: false })).toBeVisible();
-    await expect(page.getByText('C#', { exact: true }).first()).toBeVisible();
-    await expect(page.getByText('.NET 8+', { exact: true }).first()).toBeVisible();
+    await expect(page.getByRole('heading', { level: 1, name: 'JobScanr' })).toBeVisible();
+    await expect(page.getByText('Automated job radar that scans', { exact: false })).toBeVisible();
+    await expect(page.getByText('Python', { exact: true }).first()).toBeVisible();
+    await expect(page.getByText('Supabase', { exact: true }).first()).toBeVisible();
     await expect(page.getByRole('link', { name: 'View Source Code' })).toHaveAttribute(
       'href',
-      'https://github.com/ghimpumihai/HealthCheck'
+      'https://github.com/ghimpumihai/JobScanr'
     );
     await expect(page.getByRole('link', { name: 'Back to Projects' })).toHaveAttribute('href', '/');
   });
@@ -83,7 +83,7 @@ test.describe('Projects Routing & Detail Pages', () => {
   });
 
   test('Back to Projects works across all detail pages', async ({ page }) => {
-    const slugs = ['healthcheck', 'seebump', 'skywind'];
+    const slugs = ['jobscanr', 'seebump', 'skywind'];
 
     for (const slug of slugs) {
       await page.goto(`/projects/${slug}`);

@@ -28,18 +28,18 @@ export const projects: Project[] = [
 		githubUrl: 'https://github.com/ghimpumihai/Neon-Rain'
 	},
 	{
-		slug: 'healthcheck',
+		slug: 'jobscanr',
 		plateCode: 'FIG 02',
-		domain: 'Uptime Telemetry',
-		title: 'HealthCheck',
+		domain: 'Automated Job Radar & Pipeline',
+		title: 'JobScanr',
 		description:
-			'Solves delayed outage detection by continuously monitoring website uptime, HTTP status, and response metrics. Provides real-time analytics to ensure high availability for web services.',
+			'Automated job radar that scans 3,600+ European tech company career boards daily across 7 ATS platforms, filtering for early-career software roles and delivering a zero-cost daily email digest.',
 		longDescription:
-			'HealthCheck is a comprehensive uptime monitoring solution built with C# and .NET 8+. It continuously tracks website availability, HTTP status codes, and response metrics in real-time. The platform provides detailed analytics dashboards using Angular 17+ to help teams identify and respond to outages before they impact users.',
-		image: '/images/projects/HealthCheck.jpg',
-		imageColor: 'bg-green-500',
-		tags: ['C#', '.NET 8+', 'Angular 17+', 'TypeScript', 'Swagger/OpenAPI'],
-		githubUrl: 'https://github.com/ghimpumihai/HealthCheck'
+			'JobScanr is a zero-cost automated job discovery and self-healing triage pipeline running on Python 3.12, GitHub Actions, and Supabase (PostgreSQL). Every day at 06:00 UTC it scrapes 50,000+ live postings across Greenhouse, Ashby, Lever, Workday, SmartRecruiters, and Teamtailor, enriches missing job descriptions, and applies strict multi-stage filters for internship, junior, and graduate software engineering roles across Europe. It also includes an AI-assisted link repair pipeline powered by Groq LLM and DuckDuckGo search that automatically repairs broken ATS feeds via isolated Pull Requests.',
+		image: '',
+		imageColor: 'bg-amber-600',
+		tags: ['Python', 'PostgreSQL', 'Supabase', 'GitHub Actions', 'Groq LLM', 'REST & GraphQL'],
+		githubUrl: 'https://github.com/ghimpumihai/JobScanr'
 	},
 	{
 		slug: 'seebump',
