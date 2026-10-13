@@ -26,7 +26,8 @@ const config: Config = {
 				},
 				copper: {
 					DEFAULT: 'var(--accent-copper)',
-					soft: 'var(--accent-copper-soft)'
+					soft: 'var(--accent-copper-soft)',
+					contrast: 'var(--copper-contrast)'
 				},
 				hairline: {
 					DEFAULT: 'var(--line-subtle)',

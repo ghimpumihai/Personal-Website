@@ -81,6 +81,16 @@
 
 	let activeNodeIndex = $state(0);
 	const activeNode = $derived(systemNodes[activeNodeIndex]);
+
+	function handleNodeKeydown(e: KeyboardEvent, idx: number) {
+		if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+			e.preventDefault();
+			activeNodeIndex = (idx + 1) % systemNodes.length;
+		} else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+			e.preventDefault();
+			activeNodeIndex = (idx - 1 + systemNodes.length) % systemNodes.length;
+		}
+	}
 </script>
 
 <section id="hero" class="border-b border-hairline-strong">
@@ -108,7 +118,7 @@
 				<div class="mt-8 flex flex-wrap items-center gap-3.5">
 					<a
 						href="#projects"
-						class="inline-flex items-center gap-2 border border-copper bg-copper px-5 py-3 font-mono text-xs font-medium uppercase tracking-wider text-[#FAF7F1] transition-opacity hover:opacity-90 dark:text-[#161412]"
+						class="inline-flex items-center gap-2 border border-copper bg-copper px-5 py-3 font-mono text-xs font-medium uppercase tracking-wider text-copper-contrast transition-opacity hover:opacity-90"
 					>
 						<span>Explore Projects (6)</span>
 						<svg
@@ -139,11 +149,17 @@
 
 			<!-- Interactive 6-Step System & Career Node Selector -->
 			<div class="mt-12 border-t border-hairline pt-6">
-				<div class="grid grid-cols-2 gap-2.5 sm:grid-cols-3">
+				<div role="tablist" aria-label="Career and project nodes" class="grid grid-cols-2 gap-2.5 sm:grid-cols-3">
 					{#each systemNodes as node, idx (node.id)}
 						<button
 							type="button"
+							role="tab"
+							id="tab-{node.id}"
+							aria-selected={activeNodeIndex === idx}
+							aria-controls="panel-system-node"
+							tabindex={activeNodeIndex === idx ? 0 : -1}
 							onclick={() => (activeNodeIndex = idx)}
+							onkeydown={(e) => handleNodeKeydown(e, idx)}
 							class="border p-3 text-left font-mono text-xs transition-colors {activeNodeIndex ===
 							idx
 								? 'border-copper bg-copper-soft text-ink'
@@ -156,6 +172,9 @@
 				</div>
 
 				<div
+					id="panel-system-node"
+					role="tabpanel"
+					aria-labelledby="tab-{activeNode.id}"
 					class="mt-3 flex flex-col justify-between gap-4 border border-hairline bg-paper-card p-4 sm:flex-row sm:items-center"
 				>
 					<div>

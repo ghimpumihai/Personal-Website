@@ -190,7 +190,7 @@
 			type="button"
 			onclick={handleUpload}
 			disabled={isUploading || !blobConfigured}
-			class="border border-copper bg-copper px-5 py-3 font-mono text-xs font-medium uppercase tracking-wider text-[#FAF7F1] transition-opacity hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-50 dark:text-[#161412]"
+			class="border border-copper bg-copper px-5 py-3 font-mono text-xs font-medium uppercase tracking-wider text-copper-contrast transition-opacity hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-50"
 		>
 			{isUploading ? 'Uploading...' : 'Upload to Blob'}
 		</button>
@@ -233,7 +233,7 @@
 					<button
 						type="button"
 						onclick={handleUseImage}
-						class="border border-copper bg-copper px-4 py-2 font-mono text-xs font-medium text-[#FAF7F1] dark:text-[#161412]"
+						class="border border-copper bg-copper px-4 py-2 font-mono text-xs font-medium text-copper-contrast"
 					>
 						Insert into Article
 					</button>

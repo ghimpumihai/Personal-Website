@@ -68,7 +68,7 @@
 									<span>PIPELINE // 3,600+ EU CAREER BOARDS</span>
 									<span>PYTHON + SUPABASE</span>
 								</div>
-								<div class="my-auto grid grid-cols-[1fr_20px_1fr_20px_1fr] items-center py-2">
+								<div class="my-auto grid grid-cols-[1fr_12px_1fr_12px_1fr] sm:grid-cols-[1fr_20px_1fr_20px_1fr] items-center py-1 sm:py-2 text-xs">
 									<div class="border border-hairline-strong bg-paper-card p-2 text-center">
 										<span class="block font-semibold text-copper">7 ATS APIS</span>
 										<span class="text-ink-muted">50k+ Jobs</span>
@@ -113,7 +113,7 @@
 									<span>SCHEMA // PACK &amp; INVENTORY CRUD</span>
 									<span>NEXT.JS + RADIX</span>
 								</div>
-								<div class="my-auto grid grid-cols-[1fr_20px_1fr_20px_1fr] items-center py-2">
+								<div class="my-auto grid grid-cols-[1fr_12px_1fr_12px_1fr] sm:grid-cols-[1fr_20px_1fr_20px_1fr] items-center py-1 sm:py-2 text-xs">
 									<div class="border border-hairline-strong bg-paper-card p-2 text-center">
 										<span class="block font-semibold text-copper">PACK #01</span>
 										<span class="text-ink-muted">Rarity</span>
@@ -158,7 +158,7 @@
 									<span>TOPOLOGY // KAFKA EVENT PIPELINE</span>
 									<span>QUARKUS + OIDC</span>
 								</div>
-								<div class="my-auto grid grid-cols-[1fr_20px_1fr_20px_1fr] items-center py-2">
+								<div class="my-auto grid grid-cols-[1fr_12px_1fr_12px_1fr] sm:grid-cols-[1fr_20px_1fr_20px_1fr] items-center py-1 sm:py-2 text-xs">
 									<div class="border border-hairline-strong bg-paper-card p-2 text-center">
 										<span class="block font-semibold text-copper">GATEWAY</span>
 										<span class="text-ink-muted">Keycloak</span>

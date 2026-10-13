@@ -18,6 +18,14 @@
 	}
 </script>
 
+<svelte:window
+	onkeydown={(e) => {
+		if (e.key === 'Escape' && isDrawerOpen) {
+			closeDrawer();
+		}
+	}}
+/>
+
 <header class="sticky top-0 z-50 w-full border-b border-hairline-strong bg-paper-card">
 	<div class="mx-auto max-w-[1360px] border-x border-hairline-strong">
 		<div class="flex items-stretch justify-between">
@@ -104,6 +112,7 @@
 					onclick={() => (isDrawerOpen = !isDrawerOpen)}
 					aria-label="Toggle mobile menu"
 					aria-expanded={isDrawerOpen}
+					aria-controls="mobile-drawer"
 					class="flex items-center gap-1.5 border-l border-hairline bg-paper px-4 py-3 font-mono text-xs font-medium text-ink transition-colors hover:bg-paper-elevated md:hidden"
 				>
 					<span>{isDrawerOpen ? 'CLOSE' : 'MENU'}</span>
@@ -126,12 +135,12 @@
 		</div>
 
 		<!-- Mobile Quick-Jump Strip (All 5 Routes Visible at 390px) -->
-		<div class="grid grid-cols-5 border-t border-hairline bg-paper-elevated md:hidden">
+		<nav aria-label="Mobile quick links" class="grid grid-cols-5 border-t border-hairline bg-paper-elevated md:hidden">
 			{#each navLinks as link, i (link.name)}
 				<a
 					href={link.href}
 					onclick={closeDrawer}
-					class="py-2.5 text-center font-mono text-xs uppercase tracking-tight {i < 4
+					class="flex min-h-[44px] items-center justify-center px-1 py-2 text-center font-mono text-xs uppercase tracking-tight {i < 4
 						? 'border-r border-hairline'
 						: ''} {link.match(page.url.pathname)
 						? 'bg-copper-soft font-semibold text-copper'
@@ -140,18 +149,18 @@
 					{link.name}
 				</a>
 			{/each}
-		</div>
+		</nav>
 
 		<!-- Mobile Slide-Down Blueprint Index Drawer -->
 		{#if isDrawerOpen}
-			<div class="border-t border-hairline-strong bg-paper-card p-4 md:hidden">
+			<div id="mobile-drawer" class="border-t border-hairline-strong bg-paper-card p-4 md:hidden">
 				<nav aria-label="Mobile" class="space-y-4">
 					<div class="grid gap-2">
 						{#each navLinks as link (link.name)}
 							<a
 								href={link.href}
 								onclick={closeDrawer}
-								class="flex items-center justify-between border border-hairline bg-paper px-3.5 py-2.5 font-mono text-xs text-ink transition-colors hover:border-copper hover:text-copper"
+								class="flex min-h-[44px] items-center justify-between border border-hairline bg-paper px-3.5 py-2.5 font-mono text-xs text-ink transition-colors hover:border-copper hover:text-copper"
 							>
 								<span>{link.name}</span>
 								<span class="text-copper">→</span>
@@ -165,7 +174,7 @@
 								<a
 									href="/projects/{proj.slug}"
 									onclick={closeDrawer}
-									class="border border-hairline bg-paper px-3 py-2 font-mono text-xs text-ink-muted transition-colors hover:border-copper hover:text-copper"
+									class="flex min-h-[44px] items-center border border-hairline bg-paper px-3 py-2 font-mono text-xs text-ink-muted transition-colors hover:border-copper hover:text-copper"
 								>
 									{proj.title}
 								</a>

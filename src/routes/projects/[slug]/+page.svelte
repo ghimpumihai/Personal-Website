@@ -45,7 +45,7 @@
 			</a>
 			<a
 				href="/#projects"
-				class="border border-hairline-strong bg-paper-card px-2.5 py-1 font-mono text-xs text-ink-muted transition-colors hover:border-copper hover:text-copper"
+				class="inline-flex min-h-[44px] items-center border border-hairline-strong bg-paper-card px-3 py-1 font-mono text-xs text-ink-muted transition-colors hover:border-copper hover:text-copper"
 			>
 				SEC 03 // All Plates
 			</a>
@@ -164,7 +164,7 @@
 								href={project.githubUrl}
 								target="_blank"
 								rel="noopener noreferrer"
-								class="inline-flex items-center justify-between border border-copper bg-copper px-4 py-3 font-mono text-xs font-medium uppercase tracking-wider text-[#FAF7F1] transition-opacity hover:opacity-90 dark:text-[#161412]"
+								class="inline-flex items-center justify-between border border-copper bg-copper px-4 py-3 font-mono text-xs font-medium uppercase tracking-wider text-copper-contrast transition-opacity hover:opacity-90 min-h-[44px]"
 							>
 								<span>View Source Code</span>
 								<span aria-hidden="true">↗</span>
@@ -191,7 +191,7 @@
 						{#each allProjects as item (item.slug)}
 							<a
 								href="/projects/{item.slug}"
-								class="flex items-center justify-between border px-3.5 py-2.5 font-mono text-xs transition-colors {item.slug ===
+								class="flex min-h-[44px] items-center justify-between border px-3.5 py-2.5 font-mono text-xs transition-colors {item.slug ===
 								project.slug
 									? 'border-copper bg-copper-soft font-semibold text-copper'
 									: 'border-hairline bg-paper text-ink hover:border-copper'}"

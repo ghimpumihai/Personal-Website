@@ -52,8 +52,9 @@
 					{#each post.themes as theme (theme)}
 						<button
 							type="button"
+							aria-pressed={selectedThemes.includes(theme)}
 							onclick={() => toggleThemeFilter(theme)}
-							class="border px-3 py-1 font-mono text-xs transition-colors {selectedThemes.includes(
+							class="inline-flex min-h-[44px] items-center border px-3 py-1 font-mono text-xs transition-colors {selectedThemes.includes(
 								theme
 							)
 								? 'border-copper bg-copper-soft font-semibold text-copper'
@@ -67,7 +68,7 @@
 				<div class="mt-6 pt-2">
 					<a
 						href="/blog/{post.slug}"
-						class="inline-flex items-center gap-2 border border-copper bg-copper px-4 py-2.5 font-mono text-xs font-medium uppercase tracking-wider text-[#FAF7F1] transition-opacity hover:opacity-90 dark:text-[#161412]"
+						class="inline-flex items-center gap-2 border border-copper bg-copper px-4 py-2.5 font-mono text-xs font-medium uppercase tracking-wider text-copper-contrast transition-opacity hover:opacity-90 min-h-[44px]"
 					>
 						<span>Read Article</span>
 						<span aria-hidden="true">→</span>
@@ -123,8 +124,9 @@
 						{@const active = selectedThemes.includes(theme)}
 						<button
 							type="button"
+							aria-pressed={active}
 							onclick={() => toggleThemeFilter(theme)}
-							class="border px-3.5 py-2.5 text-left font-mono text-xs transition-colors {active
+							class="flex min-h-[44px] items-center border px-3.5 py-2.5 text-left font-mono text-xs transition-colors {active
 								? 'border-copper bg-copper-soft font-semibold text-copper'
 								: 'border-hairline-strong bg-paper-card text-ink hover:border-copper'}"
 						>
