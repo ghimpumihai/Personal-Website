@@ -113,13 +113,13 @@
 	</div>
 
 	{#if isDrawerOpen}
-		<nav id="mobile-nav" aria-label="Mobile" class="border-t border-hairline bg-paper-card px-4 py-3 sm:hidden">
-			<div class="flex flex-col space-y-2">
+		<nav id="mobile-nav" aria-label="Mobile" class="border-t border-hairline bg-paper-card px-4 py-2 sm:hidden">
+			<div class="flex flex-col space-y-1">
 				{#each navLinks as link (link.name)}
 					<a
 						href={link.href}
 						onclick={closeDrawer}
-						class="rounded-md px-3 py-2 text-sm font-medium text-ink transition-colors hover:bg-paper-elevated hover:text-copper"
+						class="flex min-h-[44px] items-center rounded-md px-3 text-sm font-medium text-ink transition-colors hover:bg-paper-elevated hover:text-copper"
 					>
 						{link.name}
 					</a>

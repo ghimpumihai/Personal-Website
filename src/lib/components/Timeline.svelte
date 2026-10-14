@@ -46,29 +46,28 @@
 
 	<div class="mt-8 space-y-8">
 		{#each experiences as exp (exp.id)}
-			<article class="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
-				<div class="max-w-xl">
+			<article class="space-y-2">
+				<div class="flex flex-col gap-0.5 sm:flex-row sm:items-baseline sm:justify-between">
 					<h3 class="text-base font-semibold text-ink">
 						{exp.title}
 						<span class="font-normal text-ink-muted">· {exp.companyOrSchool}</span>
 					</h3>
-
-					<p class="mt-1.5 text-sm leading-relaxed text-ink-muted">
-						{exp.description}
-					</p>
-
-					<div class="mt-2.5 flex flex-wrap gap-1.5">
-						{#each exp.stack as tech (tech)}
-							<span class="rounded bg-paper-elevated px-2 py-0.5 text-xs text-ink-muted">
-								{tech}
-							</span>
-						{/each}
-					</div>
+					<time class="shrink-0 text-xs font-medium text-ink-muted sm:text-right">
+						{exp.period}
+					</time>
 				</div>
 
-				<time class="shrink-0 text-xs font-medium text-ink-muted sm:text-right">
-					{exp.period}
-				</time>
+				<p class="text-sm leading-relaxed text-ink-muted max-w-xl">
+					{exp.description}
+				</p>
+
+				<div class="flex flex-wrap gap-1.5 pt-0.5">
+					{#each exp.stack as tech (tech)}
+						<span class="rounded bg-paper-elevated px-2 py-0.5 text-xs text-ink-muted">
+							{tech}
+						</span>
+					{/each}
+				</div>
 			</article>
 		{/each}
 	</div>

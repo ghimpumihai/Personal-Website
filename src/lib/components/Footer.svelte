@@ -22,7 +22,7 @@
 </script>
 
 <footer class="mt-auto border-t border-hairline/60 py-8">
-	<div class="mx-auto flex max-w-4xl flex-col items-center justify-between gap-4 px-4 sm:flex-row sm:px-6 text-sm text-ink-muted">
+	<div class="mx-auto flex max-w-4xl flex-col items-start justify-between gap-4 px-4 sm:flex-row sm:items-center sm:px-6 text-sm text-ink-muted">
 		<div class="flex items-center gap-2">
 			<span class="font-medium text-ink">Ștefan Ghimpu</span>
 			<span>·</span>
