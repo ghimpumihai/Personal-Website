@@ -43,10 +43,6 @@ html {
 
 body {
 	background-color: var(--bg-paper);
-	background-image:
-		linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
-		linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
-	background-size: 56px 56px;
 	color: var(--ink-primary);
 	transition: background-color 0.2s cubic-bezier(0.22, 1, 0.36, 1), color 0.2s cubic-bezier(0.22, 1, 0.36, 1);
 }
