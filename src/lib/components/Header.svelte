@@ -23,7 +23,7 @@
 	}}
 />
 
-<header class="sticky top-0 z-50 w-full border-b border-hairline/60 bg-paper/90 backdrop-blur-sm">
+<header class="sticky top-0 z-50 w-full border-b border-hairline bg-paper">
 	<div class="mx-auto flex h-14 max-w-4xl items-center justify-between px-4 sm:px-6">
 		<a
 			href="/"
@@ -116,7 +116,7 @@
 		<!-- Backdrop to close menu when clicking outside -->
 		<button
 			type="button"
-			class="fixed inset-0 top-14 z-40 bg-ink/10 backdrop-blur-[1px] sm:hidden"
+			class="fixed inset-0 top-14 z-40 bg-black/20 dark:bg-black/40 sm:hidden"
 			onclick={closeDrawer}
 			aria-label="Close menu backdrop"
 			tabindex="-1"
@@ -125,7 +125,7 @@
 		<nav
 			id="mobile-nav"
 			aria-label="Mobile"
-			class="absolute left-0 top-full z-50 w-full border-b border-hairline bg-paper/98 px-4 py-2.5 shadow-md backdrop-blur-md sm:hidden"
+			class="absolute left-0 top-full z-50 w-full border-b border-hairline-strong bg-paper-card px-4 py-3 shadow-xl sm:hidden"
 		>
 			<div class="mx-auto flex max-w-4xl flex-col space-y-1">
 				{#each navLinks as link (link.name)}
