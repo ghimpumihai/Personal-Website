@@ -103,6 +103,8 @@
 				<img
 					src={project.image}
 					alt={project.title}
+					loading="lazy"
+					decoding="async"
 					class="h-full w-full object-cover"
 				/>
 			</div>

@@ -44,7 +44,7 @@
 
 				<div class="mt-4 flex flex-wrap gap-1.5 pt-2 border-t border-hairline/40">
 					{#each project.tags.slice(0, 4) as tag (tag)}
-						<span class="rounded bg-paper px-2 py-0.5 text-[11px] text-ink-muted">
+						<span class="rounded bg-paper px-2 py-0.5 text-xs text-ink-muted">
 							{tag}
 						</span>
 					{/each}

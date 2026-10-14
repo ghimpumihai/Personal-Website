@@ -55,7 +55,7 @@
 					type="button"
 					onclick={() => themeState.toggle()}
 					aria-label="Toggle theme"
-					class="inline-flex h-9 w-9 items-center justify-center rounded-md border border-hairline bg-paper-card text-ink-muted transition-colors hover:border-hairline-strong hover:text-ink"
+					class="inline-flex min-h-[44px] min-w-[44px] sm:min-h-0 sm:min-w-0 sm:h-9 sm:w-9 items-center justify-center rounded-md border border-hairline bg-paper-card text-ink-muted transition-colors hover:border-hairline-strong hover:text-ink"
 				>
 					{#if themeState.current === 'light'}
 						<svg
@@ -91,7 +91,7 @@
 					aria-label="Toggle menu"
 					aria-expanded={isDrawerOpen}
 					aria-controls="mobile-nav"
-					class="inline-flex h-9 w-9 items-center justify-center rounded-md border border-hairline bg-paper-card text-ink transition-colors hover:border-hairline-strong sm:hidden"
+					class="inline-flex min-h-[44px] min-w-[44px] items-center justify-center rounded-md border border-hairline bg-paper-card text-ink transition-colors hover:border-hairline-strong sm:hidden"
 				>
 					<svg
 						class="h-4 w-4"
