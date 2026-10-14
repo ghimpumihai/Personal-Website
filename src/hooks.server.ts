@@ -7,7 +7,14 @@ function isProtectedPath(pathname: string) {
 
 export const handle: Handle = async ({ event, resolve }) => {
 	if (isProtectedPath(event.url.pathname)) {
-		const result = validateBasicAuthHeader(event.request.headers.get('authorization'));
+		let clientIp = '127.0.0.1';
+		try {
+			clientIp = event.getClientAddress();
+		} catch {
+			// In tests or environments without an address hook, fallback to default
+		}
+
+		const result = validateBasicAuthHeader(event.request.headers.get('authorization'), clientIp);
 		if (!result.ok) {
 			return result.response;
 		}
