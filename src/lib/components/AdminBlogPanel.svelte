@@ -217,7 +217,7 @@
 			<button
 				type="button"
 				onclick={handleNewPost}
-				class="border border-copper bg-copper px-3.5 py-1.5 font-mono text-xs font-medium text-[#FAF7F1] dark:text-[#161412]"
+				class="inline-flex min-h-[36px] items-center border border-copper bg-copper px-3.5 py-1.5 font-mono text-xs font-medium text-copper-contrast"
 			>
 				+ New
 			</button>
@@ -269,7 +269,7 @@
 				type="button"
 				onclick={() => (activeTab = 'editor')}
 				class="border px-4 py-2 font-mono text-xs uppercase tracking-wider {activeTab === 'editor'
-					? 'border-copper bg-copper text-[#FAF7F1] dark:text-[#161412]'
+					? 'border-copper bg-copper text-copper-contrast'
 					: 'border-hairline-strong bg-paper text-ink'}"
 			>
 				01 // Editor
@@ -278,7 +278,7 @@
 				type="button"
 				onclick={() => (activeTab = 'preview')}
 				class="border px-4 py-2 font-mono text-xs uppercase tracking-wider {activeTab === 'preview'
-					? 'border-copper bg-copper text-[#FAF7F1] dark:text-[#161412]'
+					? 'border-copper bg-copper text-copper-contrast'
 					: 'border-hairline-strong bg-paper text-ink'}"
 			>
 				02 // Live Preview
@@ -402,7 +402,7 @@
 						<button
 							type="button"
 							onclick={() => addLinkRow(section)}
-							class="font-mono text-xs font-semibold text-copper hover:underline"
+							class="inline-flex min-h-[36px] items-center font-mono text-xs font-semibold text-copper hover:underline"
 						>
 							+ Add Row
 						</button>
@@ -428,7 +428,7 @@
 								<button
 									type="button"
 									onclick={() => removeLinkRow(section, index)}
-									class="mt-2 font-mono text-xs text-copper hover:underline"
+									class="mt-2 inline-flex min-h-[36px] items-center font-mono text-xs text-copper hover:underline"
 								>
 									Remove Row
 								</button>
@@ -444,7 +444,7 @@
 				type="button"
 				onclick={handleSave}
 				disabled={isPending || !blobConfigured}
-				class="border border-copper bg-copper px-5 py-3 font-mono text-xs font-medium uppercase tracking-wider text-[#FAF7F1] disabled:opacity-50 dark:text-[#161412]"
+				class="inline-flex min-h-[44px] items-center border border-copper bg-copper px-5 py-3 font-mono text-xs font-medium uppercase tracking-wider text-copper-contrast disabled:opacity-50"
 			>
 				{isPending ? 'Saving...' : form.originalSlug ? 'Update Post' : 'Create Post'}
 			</button>
@@ -452,7 +452,7 @@
 				type="button"
 				onclick={handleDelete}
 				disabled={isPending || !blobConfigured || !form.originalSlug}
-				class="border border-hairline-strong bg-paper px-5 py-3 font-mono text-xs font-medium uppercase tracking-wider text-copper disabled:opacity-50"
+				class="inline-flex min-h-[44px] items-center border border-hairline-strong bg-paper px-5 py-3 font-mono text-xs font-medium uppercase tracking-wider text-copper disabled:opacity-50"
 			>
 				Delete Post
 			</button>

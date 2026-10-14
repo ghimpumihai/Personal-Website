@@ -13,6 +13,7 @@
 	--line-subtle: #D8D0C1;
 	--line-strong: #B8AE9C;
 	--grid-line: rgba(30, 27, 24, 0.042);
+	--copper-contrast: #FAF7F1;
 	color-scheme: light;
 }
 
@@ -27,6 +28,7 @@ html.dark {
 	--line-subtle: #2E2925;
 	--line-strong: #463E38;
 	--grid-line: rgba(234, 227, 213, 0.035);
+	--copper-contrast: #161412;
 	color-scheme: dark;
 }
 
@@ -41,17 +43,13 @@ html {
 
 body {
 	background-color: var(--bg-paper);
-	background-image:
-		linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
-		linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
-	background-size: 56px 56px;
 	color: var(--ink-primary);
 	transition: background-color 0.2s cubic-bezier(0.22, 1, 0.36, 1), color 0.2s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 ::selection {
 	background-color: var(--accent-copper);
-	color: #FAF7F1;
+	color: var(--copper-contrast);
 }
 
 ::-webkit-scrollbar {

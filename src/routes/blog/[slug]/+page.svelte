@@ -8,88 +8,91 @@
 </script>
 
 <svelte:head>
-	<title>{post.title} | Blog — Portfolio</title>
+	<title>{post.title} | Ștefan Ghimpu</title>
 	<meta name="description" content={post.excerpt} />
 </svelte:head>
 
-<section class="sheet-enter">
-	<div
-		class="flex flex-wrap items-center justify-between gap-4 border-b border-hairline-strong bg-paper-elevated px-6 py-5 sm:px-10 md:px-14"
-	>
+<article class="sheet-enter py-10 sm:py-14">
+	<!-- Top Navigation -->
+	<div class="mb-8 flex items-center justify-between text-xs text-ink-muted">
 		<a
 			href="/blog"
-			class="inline-flex items-center gap-2 font-mono text-xs font-medium uppercase tracking-wider text-ink transition-colors hover:text-copper"
+			class="inline-flex items-center gap-1.5 font-medium transition-colors hover:text-copper"
 		>
 			<span aria-hidden="true">←</span>
-			<span>Back to all articles</span>
+			<span>Back to articles</span>
 		</a>
 
-		<span class="font-mono text-xs uppercase tracking-wider text-copper">
-			PUBLISHED {formatBlogDate(post.publishedAt)}
-		</span>
+		<time>{formatBlogDate(post.publishedAt)}</time>
 	</div>
 
-	<div class="mx-auto max-w-4xl px-6 py-10 sm:px-10 md:py-14">
-		<header class="border border-hairline-strong bg-paper-card p-6 sm:p-10">
-			<h1 class="font-serif text-4xl font-semibold tracking-tight text-ink sm:text-5xl">
-				{post.title}
-			</h1>
+	<!-- Post Header -->
+	<header class="border-b border-hairline/60 pb-8">
+		<div class="flex flex-wrap gap-1.5 mb-3">
+			{#each post.themes as theme (theme)}
+				<span class="rounded bg-paper-card border border-hairline/60 px-2.5 py-0.5 text-xs font-medium text-copper">
+					{theme}
+				</span>
+			{/each}
+		</div>
 
-			<div class="mt-4 flex flex-wrap gap-2">
-				{#each post.themes as theme (theme)}
-					<span
-						class="border border-copper bg-copper-soft px-3 py-1 font-mono text-xs font-medium text-copper"
-					>
-						{theme}
-					</span>
-				{/each}
-			</div>
+		<h1 class="font-serif text-3xl font-semibold tracking-tight text-ink sm:text-4xl lg:text-5xl">
+			{post.title}
+		</h1>
 
-			<p class="mt-6 max-w-[68ch] text-lg leading-8 text-ink-muted">
+		{#if post.introduction}
+			<p class="mt-4 text-base leading-relaxed text-ink-muted sm:text-lg">
 				{post.introduction}
 			</p>
-		</header>
+		{/if}
+	</header>
 
-		<article class="mt-8 border border-hairline-strong bg-paper-card p-6 sm:p-10">
-			<BlogContentRenderer content={post.content} />
+	<!-- Content -->
+	<div class="mt-8">
+		<BlogContentRenderer content={post.content} />
 
-			<div class="mt-12 grid gap-8 border-t border-hairline pt-8 md:grid-cols-2">
-				<section>
-					<h2 class="font-serif text-2xl font-semibold text-ink">Bibliography</h2>
-					<ul class="mt-4 space-y-2.5 text-base leading-7 text-ink-muted">
-						{#each post.bibliography as item (item.href)}
-							<li>
-								<a
-									href={item.href}
-									target="_blank"
-									rel="noreferrer"
-									class="transition-colors hover:text-copper"
-								>
-									{item.label} ↗
-								</a>
-							</li>
-						{/each}
-					</ul>
-				</section>
+		{#if (post.bibliography && post.bibliography.length > 0) || (post.usefulLinks && post.usefulLinks.length > 0)}
+			<div class="mt-12 grid gap-8 border-t border-hairline/60 pt-8 sm:grid-cols-2">
+				{#if post.bibliography && post.bibliography.length > 0}
+					<section>
+						<h2 class="font-serif text-lg font-semibold text-ink">Bibliography</h2>
+						<ul class="mt-3 space-y-2 text-sm text-ink-muted">
+							{#each post.bibliography as item (item.href)}
+								<li>
+									<a
+										href={item.href}
+										target="_blank"
+										rel="noreferrer"
+										class="transition-colors hover:text-copper underline-offset-4 hover:underline"
+									>
+										{item.label} ↗
+									</a>
+								</li>
+							{/each}
+						</ul>
+					</section>
+				{/if}
 
-				<section>
-					<h2 class="font-serif text-2xl font-semibold text-ink">Useful links</h2>
-					<ul class="mt-4 space-y-2.5 text-base leading-7 text-ink-muted">
-						{#each post.usefulLinks as item (item.href)}
-							<li>
-								<a
-									href={item.href}
-									target="_blank"
-									rel="noreferrer"
-									class="transition-colors hover:text-copper"
-								>
-									{item.label} ↗
-								</a>
-							</li>
-						{/each}
-					</ul>
-				</section>
+				{#if post.usefulLinks && post.usefulLinks.length > 0}
+					<section>
+						<h2 class="font-serif text-lg font-semibold text-ink">Useful Links</h2>
+						<ul class="mt-3 space-y-2 text-sm text-ink-muted">
+							{#each post.usefulLinks as item (item.href)}
+								<li>
+									<a
+										href={item.href}
+										target="_blank"
+										rel="noreferrer"
+										class="transition-colors hover:text-copper underline-offset-4 hover:underline"
+									>
+										{item.label} ↗
+									</a>
+								</li>
+							{/each}
+						</ul>
+					</section>
+				{/if}
 			</div>
-		</article>
+		{/if}
 	</div>
-</section>
+</article>

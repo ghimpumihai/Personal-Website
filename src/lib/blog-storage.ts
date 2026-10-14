@@ -6,6 +6,9 @@ const BLOG_IMAGE_PREFIX = 'blog/images';
 
 let cachedBlogPosts: BlogPost[] | null = null;
 let cacheUpdatedAt: string | null = null;
+let cacheExpiresAt = 0;
+// TTL: 5 minutes. Protects Vercel Blob from repeat reads during high traffic
+const CACHE_TTL_MS = 5 * 60 * 1000;
 
 export function isBlobConfigured() {
 	return Boolean(process.env.BLOB_READ_WRITE_TOKEN);
@@ -80,6 +83,7 @@ function sanitizeBlogPostsCollection(input: unknown) {
 function updateCache(posts: BlogPost[]) {
 	cachedBlogPosts = sortBlogPosts(posts);
 	cacheUpdatedAt = new Date().toISOString();
+	cacheExpiresAt = Date.now() + CACHE_TTL_MS;
 	return cachedBlogPosts;
 }
 
@@ -130,6 +134,11 @@ async function writePostsToBlob(posts: BlogPost[]) {
 }
 
 export async function getAllBlogPosts() {
+	const now = Date.now();
+	if (cachedBlogPosts && now < cacheExpiresAt) {
+		return sortBlogPosts(cachedBlogPosts);
+	}
+
 	try {
 		return await readPostsFromBlob();
 	} catch {

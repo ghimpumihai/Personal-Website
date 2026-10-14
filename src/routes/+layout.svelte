@@ -13,9 +13,9 @@
 	});
 </script>
 
-<div class="flex min-h-screen flex-col">
+<div class="flex min-h-screen flex-col bg-paper text-ink">
 	<Header />
-	<main class="mx-auto w-full max-w-[1360px] grow border-x border-hairline-strong bg-paper">
+	<main class="mx-auto w-full max-w-4xl grow px-4 sm:px-6">
 		{@render children()}
 	</main>
 	<Footer />

@@ -1,3 +1,10 @@
+import { createHash, timingSafeEqual } from "node:crypto";
+import {
+  checkRateLimit,
+  recordFailedAttempt,
+  resetRateLimit,
+} from "$lib/rate-limit";
+
 const REALM = "Blog Admin";
 
 function unauthorizedResponse() {
@@ -9,7 +16,28 @@ function unauthorizedResponse() {
   });
 }
 
-export function validateBasicAuthHeader(header: string | null) {
+function rateLimitedResponse(retryAfterSeconds: number) {
+  return new Response(
+    `Too many failed login attempts. Please wait ${retryAfterSeconds} seconds before trying again.`,
+    {
+      status: 429,
+      headers: {
+        "Retry-After": String(retryAfterSeconds),
+      },
+    },
+  );
+}
+
+function safeCompare(a: string, b: string): boolean {
+  const hashA = createHash("sha256").update(a).digest();
+  const hashB = createHash("sha256").update(b).digest();
+  return timingSafeEqual(hashA, hashB);
+}
+
+export function validateBasicAuthHeader(
+  header: string | null,
+  clientIp = "127.0.0.1",
+) {
   const expectedUsername = process.env.BLOG_ADMIN_USERNAME;
   const expectedPassword = process.env.BLOG_ADMIN_PASSWORD;
 
@@ -23,23 +51,43 @@ export function validateBasicAuthHeader(header: string | null) {
     };
   }
 
+  const rateLimit = checkRateLimit(clientIp);
+  if (!rateLimit.allowed) {
+    return {
+      ok: false,
+      response: rateLimitedResponse(rateLimit.retryAfterSeconds ?? 60),
+    };
+  }
+
   if (!header?.startsWith("Basic ")) {
     return { ok: false, response: unauthorizedResponse() };
   }
 
-  const decoded = atob(header.slice(6));
-  const separatorIndex = decoded.indexOf(":");
+  let decoded: string;
+  try {
+    decoded = atob(header.slice(6));
+  } catch {
+    recordFailedAttempt(clientIp);
+    return { ok: false, response: unauthorizedResponse() };
+  }
 
+  const separatorIndex = decoded.indexOf(":");
   if (separatorIndex === -1) {
+    recordFailedAttempt(clientIp);
     return { ok: false, response: unauthorizedResponse() };
   }
 
   const username = decoded.slice(0, separatorIndex);
   const password = decoded.slice(separatorIndex + 1);
 
-  if (username !== expectedUsername || password !== expectedPassword) {
+  if (
+    !safeCompare(username, expectedUsername) ||
+    !safeCompare(password, expectedPassword)
+  ) {
+    recordFailedAttempt(clientIp);
     return { ok: false, response: unauthorizedResponse() };
   }
 
+  resetRateLimit(clientIp);
   return { ok: true as const };
 }
