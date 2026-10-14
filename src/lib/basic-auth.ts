@@ -27,7 +27,13 @@ export function validateBasicAuthHeader(header: string | null) {
     return { ok: false, response: unauthorizedResponse() };
   }
 
-  const decoded = atob(header.slice(6));
+  let decoded: string;
+  try {
+    decoded = atob(header.slice(6));
+  } catch {
+    return { ok: false, response: unauthorizedResponse() };
+  }
+
   const separatorIndex = decoded.indexOf(":");
 
   if (separatorIndex === -1) {
